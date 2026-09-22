@@ -1,1240 +1,282 @@
-:root {
-  --dark: #20211d;
-  --dark2: #151713;
-  --sage: #78836f;
-  --sage-dark: #56624e;
-  --cream: #f2eee5;
-  --paper: #fbfaf7;
-  --muted: #707169;
-  --line: #ddd9ce;
-  --white: #fff;
-  --gold: #b39a69;
-  --shadow: 0 25px 70px rgba(25, 27, 22, .12);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--dark);
-  font-family: "DM Sans", sans-serif;
-  line-height: 1.6;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
-
-/* =========================
-   TOP BAR
-========================= */
-
-.top-bar {
-  background: var(--dark);
-  color: white;
-  text-align: center;
-  padding: 9px 15px;
-  font-size: 11px;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-.header {
-  height: 82px;
-  padding: 0 6vw;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  position: sticky;
-  top: 0;
-  z-index: 100;
-
-  background: rgba(251,250,247,.95);
-  backdrop-filter: blur(15px);
-
-  border-bottom: 1px solid var(--line);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo .paw {
-  width: 44px;
-  height: 44px;
-
-  display: grid;
-  place-items: center;
-
-  background: var(--sage);
-  border-radius: 50%;
-
-  font-size: 21px;
-}
-
-.logo strong {
-  display: block;
-  font-family: "Playfair Display", serif;
-  font-size: 20px;
-  line-height: 1;
-}
-
-.logo small {
-  display: block;
-  color: var(--muted);
-  font-size: 10px;
-  margin-top: 5px;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-
-  font-size: 13px;
-  font-weight: 600;
-}
-
-nav a:hover {
-  color: var(--sage-dark);
-}
-
-.nav-button {
-  padding: 11px 19px;
-  border: 1px solid var(--dark);
-  border-radius: 50px;
-}
-
-.menu-button {
-  display: none;
-  background: transparent;
-  border: 0;
-  font-size: 25px;
-}
-
-
-/* =========================
-   TYPOGRAPHY
-========================= */
-
-h1,
-h2,
-h3 {
-  font-family: "Playfair Display", serif;
-}
-
-h1,
-h2 {
-  line-height: 1.04;
-}
-
-h1 {
-  font-size: clamp(58px, 7vw, 95px);
-  letter-spacing: -.05em;
-}
-
-h2 {
-  font-size: clamp(40px, 4vw, 60px);
-  letter-spacing: -.04em;
-}
-
-em {
-  color: var(--sage-dark);
-}
-
-.section {
-  max-width: 1240px;
-  margin: auto;
-  padding: 110px 5vw;
-}
-
-.section-label {
-  color: var(--sage-dark);
-  font-size: 10px;
-  letter-spacing: .2em;
-  font-weight: 700;
-}
-
-
-/* =========================
-   BUTTONS
-========================= */
-
-.button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 15px 23px;
-
-  border-radius: 50px;
-  border: 1px solid transparent;
-
-  font-size: 13px;
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition: .25s;
-}
-
-.primary {
-  background: var(--dark);
-  color: white;
-}
-
-.primary:hover {
-  background: var(--sage-dark);
-  transform: translateY(-2px);
-}
-
-.secondary {
-  border-color: var(--line);
-  background: white;
-}
-
-.secondary:hover {
-  border-color: var(--dark);
-}
-
-.light {
-  background: white;
-  color: var(--dark);
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-  max-width: 1450px;
-  min-height: 690px;
-
-  margin: auto;
-
-  padding: 80px 6vw;
-
-  display: grid;
-  grid-template-columns: .95fr 1.05fr;
-  gap: 70px;
-
-  align-items: center;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-description {
-  max-width: 560px;
-
-  color: var(--muted);
-
-  font-size: 18px;
-
-  margin: 25px 0 32px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.trust {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-
-  margin-top: 27px;
-
-  color: var(--muted);
-
-  font-size: 12px;
-}
-
-
-/* REAL HERO IMAGE */
-
-.hero-image {
-  min-height: 570px;
-
-  position: relative;
-
-  border-radius: 35px;
-
-  overflow: hidden;
-
-  background-image:
-    linear-gradient(
-      to top,
-      rgba(15,20,14,.75),
-      rgba(15,20,14,.05) 65%
-    ),
-    url("https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1200&q=85");
-
-  background-size: cover;
-  background-position: center;
-
-  box-shadow: var(--shadow);
-}
-
-.hero-image:before {
-  content: "";
-
-  position: absolute;
-  inset: 18px;
-
-  border: 1px solid rgba(255,255,255,.35);
-
-  border-radius: 25px;
-
-  pointer-events: none;
-}
-
-.hero-overlay {
-  position: absolute;
-
-  left: 45px;
-  bottom: 42px;
-
-  color: white;
-
-  max-width: 420px;
-}
-
-.hero-overlay span {
-  display: inline-block;
-
-  padding: 7px 13px;
-
-  border: 1px solid rgba(255,255,255,.45);
-
-  border-radius: 50px;
-
-  background: rgba(0,0,0,.18);
-
-  backdrop-filter: blur(8px);
-
-  font-size: 10px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
-
-.hero-overlay h2 {
-  color: white;
-
-  font-size: 48px;
-
-  margin: 16px 0 0;
-}
-
-
-/* =========================
-   INTRO
-========================= */
-
-.intro {
-  border-top: 1px solid var(--line);
-}
-
-.intro-grid,
-.section-heading {
-  display: grid;
-  grid-template-columns: 1fr .75fr;
-
-  gap: 70px;
-
-  align-items: end;
-}
-
-.intro-grid p,
-.section-heading > p {
-  color: var(--muted);
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-
-  gap: 25px;
-
-  margin-top: 70px;
-}
-
-.feature {
-  border-top: 1px solid var(--line);
-
-  padding-top: 22px;
-}
-
-.feature span {
-  color: var(--sage-dark);
-
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.feature h3 {
-  font-size: 20px;
-
-  margin: 18px 0 8px;
-}
-
-.feature p {
-  color: var(--muted);
-
-  font-size: 13px;
-}
-
-
-/* =========================
-   SERVICES
-========================= */
-
-.services {
-  max-width: none;
-
-  background: var(--cream);
-
-  padding-left: 6vw;
-  padding-right: 6vw;
-}
-
-.service-grid {
-  max-width: 1250px;
-
-  margin: 55px auto 0;
-
-  display: grid;
-
-  grid-template-columns: repeat(3,1fr);
-
-  gap: 20px;
-}
-
-.service-card {
-  position: relative;
-
-  padding: 32px;
-
-  min-height: 390px;
-
-  background: var(--paper);
-
-  border-radius: 25px;
-
-  border: 1px solid rgba(32,33,29,.08);
-
-  overflow: hidden;
-
-  transition: .3s;
-}
-
-.service-card:hover {
-  transform: translateY(-7px);
-
-  box-shadow: var(--shadow);
-}
-
-.service-card.featured {
-  background: var(--dark);
-  color: white;
-}
-
-
-/* little decorative image strip */
-
-.service-card:after {
-  content: "";
-
-  position: absolute;
-
-  right: -30px;
-  bottom: -35px;
-
-  width: 140px;
-  height: 140px;
-
-  border-radius: 50%;
-
-  background: var(--sage);
-
-  opacity: .08;
-}
-
-.service-icon {
-  font-size: 29px;
-}
-
-.popular {
-  float: right;
-
-  color: #bdc7b5;
-
-  font-size: 9px;
-  letter-spacing: .13em;
-}
-
-.service-card h3 {
-  font-size: 29px;
-
-  margin: 24px 0 7px;
-}
-
-.service-card p {
-  color: var(--muted);
-
-  font-size: 13px;
-}
-
-.featured p {
-  color: #c7cac2;
-}
-
-.service-card ul {
-  list-style: none;
-
-  padding: 16px 0;
-
-  margin: 20px 0;
-
-  border-top: 1px solid var(--line);
-}
-
-.featured ul {
-  border-color: #44483f;
-}
-
-.service-card li {
-  color: var(--muted);
-
-  font-size: 12px;
-
-  margin: 8px 0;
-}
-
-.service-card li:before {
-  content: "✓";
-
-  margin-right: 8px;
-
-  color: var(--sage-dark);
-}
-
-.featured li {
-  color: #c4c8bf;
-}
-
-.service-card a {
-  position: absolute;
-
-  bottom: 28px;
-
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.featured a {
-  color: white;
-}
-
-
-/* =========================
-   HOW IT WORKS
-========================= */
-
-.steps {
-  display: grid;
-
-  grid-template-columns: repeat(4,1fr);
-
-  gap: 20px;
-
-  margin-top: 55px;
-}
-
-.steps > div {
-  border-top: 1px solid var(--line);
-
-  padding-top: 22px;
-}
-
-.steps span {
-  color: var(--sage-dark);
-
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.steps h3 {
-  font-size: 18px;
-
-  margin: 17px 0 8px;
-}
-
-.steps p {
-  color: var(--muted);
-
-  font-size: 12px;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about {
-  display: grid;
-
-  grid-template-columns: .9fr 1.1fr;
-
-  gap: 80px;
-
-  align-items: center;
-}
-
-
-/* ACTUAL IMAGE */
-
-.about-image {
-  height: 510px;
-
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-
-  justify-content: flex-end;
-
-  padding: 40px;
-
-  color: white;
-
-  border-radius: 32px;
-
-  overflow: hidden;
-
-  background-image:
-    linear-gradient(
-      to top,
-      rgba(20,25,19,.8),
-      rgba(20,25,19,.05)
-    ),
-    url("https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=1000&q=85");
-
-  background-size: cover;
-
-  background-position: center;
-}
-
-.about-image:after {
-  content: "";
-
-  position: absolute;
-
-  inset: 18px;
-
-  border: 1px solid rgba(255,255,255,.35);
-
-  border-radius: 23px;
-}
-
-.about-image .paw {
-  background: transparent;
-
-  position: relative;
-  z-index: 2;
-
-  font-size: 40px;
-}
-
-.about-image strong {
-  position: relative;
-  z-index: 2;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 44px;
-
-  line-height: .95;
-
-  margin: 10px 0;
-}
-
-.about-image small {
-  position: relative;
-  z-index: 2;
-
-  font-size: 10px;
-
-  letter-spacing: .15em;
-}
-
-.about-content p {
-  color: var(--muted);
-}
-
-blockquote {
-  border-left: 2px solid var(--sage);
-
-  padding-left: 20px;
-
-  margin: 30px 0;
-
-  font-family: "Playfair Display", serif;
-
-  font-style: italic;
-
-  color: var(--sage-dark);
-}
-
-.text-link {
-  font-size: 13px;
-  font-weight: 700;
-}
-
-
-/* =========================
-   OPTIONS
-========================= */
-
-.options {
-  border-top: 1px solid var(--line);
-}
-
-.options-box {
-  margin-top: 50px;
-
-  padding: 35px;
-
-  display: grid;
-
-  grid-template-columns: repeat(3,1fr);
-
-  gap: 30px;
-
-  background: white;
-
-  border: 1px solid var(--line);
-
-  border-radius: 26px;
-
-  box-shadow: 0 10px 40px rgba(0,0,0,.03);
-}
-
-.options-box > div {
-  border-right: 1px solid var(--line);
-
-  padding-right: 30px;
-}
-
-.options-box > div:last-child {
-  border: 0;
-}
-
-.options-box h3 {
-  font-family: "DM Sans", sans-serif;
-
-  font-size: 14px;
-}
-
-.options-box label {
-  display: block;
-
-  padding: 9px 0;
-
-  color: var(--muted);
-
-  font-size: 12px;
-}
-
-
-/* =========================
-   BOOKING
-========================= */
-
-.booking {
-  max-width: none;
-
-  display: grid;
-
-  grid-template-columns: .75fr 1.25fr;
-
-  gap: 75px;
-
-  background: var(--dark);
-
-  color: white;
-
-  padding-left: 10vw;
-  padding-right: 10vw;
-}
-
-.booking-intro p {
-  color: #bfc2ba;
-}
-
-.contact-box {
-  margin-top: 35px;
-
-  padding: 20px;
-
-  border: 1px solid #454840;
-
-  border-radius: 17px;
-}
-
-.contact-box span,
-.contact-box small {
-  display: block;
-
-  color: #aeb1a9;
-
-  font-size: 11px;
-}
-
-.contact-box strong {
-  display: block;
-
-  margin: 3px 0;
-
-  font-size: 21px;
-}
-
-.booking-form {
-  background: var(--paper);
-
-  color: var(--dark);
-
-  border-radius: 28px;
-
-  padding: 35px;
-}
-
-.progress {
-  display: flex;
-
-  gap: 7px;
-
-  margin-bottom: 30px;
-}
-
-.progress span {
-  flex: 1;
-
-  height: 3px;
-
-  background: var(--line);
-}
-
-.progress .active {
-  background: var(--sage-dark);
-}
-
-.form-step {
-  display: none;
-}
-
-.form-step.active {
-  display: block;
-}
-
-.form-step > small {
-  color: var(--sage-dark);
-
-  font-size: 10px;
-
-  letter-spacing: .15em;
-
-  font-weight: 700;
-}
-
-.form-step h3 {
-  font-size: 32px;
-}
-
-.form-grid {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 15px;
-}
-
-.booking-form label {
-  display: block;
-
-  margin-bottom: 17px;
-
-  font-size: 11px;
-
-  font-weight: 700;
-}
-
-.booking-form input,
-.booking-form select,
-.booking-form textarea {
-  display: block;
-
-  width: 100%;
-
-  margin-top: 7px;
-
-  padding: 14px;
-
-  border: 1px solid var(--line);
-
-  border-radius: 12px;
-
-  background: white;
-
-  outline: none;
-}
-
-.booking-form input:focus,
-.booking-form select:focus,
-.booking-form textarea:focus {
-  border-color: var(--sage-dark);
-
-  box-shadow: 0 0 0 3px rgba(120,131,111,.1);
-}
-
-.form-buttons {
-  display: flex;
-
-  justify-content: space-between;
-
-  gap: 10px;
-}
-
-.success {
-  display: none;
-
-  text-align: center;
-
-  padding: 60px 10px;
-}
-
-.success-icon {
-  width: 60px;
-  height: 60px;
-
-  margin: auto;
-
-  display: grid;
-  place-items: center;
-
-  background: var(--sage);
-
-  color: white;
-
-  border-radius: 50%;
-
-  font-size: 25px;
-}
-
-.success h3 {
-  font-size: 32px;
-}
-
-.success p {
-  color: var(--muted);
-}
-
-
-/* =========================
-   FAQ
-========================= */
-
-.faq {
-  border-top: 1px solid var(--line);
-}
-
-.faq-list {
-  margin-top: 45px;
-
-  border-top: 1px solid var(--line);
-}
-
-details {
-  border-bottom: 1px solid var(--line);
-
-  padding: 21px 0;
-}
-
-summary {
-  cursor: pointer;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  font-size: 14px;
-
-  font-weight: 700;
-}
-
-details p {
-  max-width: 700px;
-
-  color: var(--muted);
-
-  font-size: 13px;
-}
-
-
-/* =========================
-   FINAL CTA
-========================= */
-
-.cta {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(70,82,62,.96),
-      rgba(86,98,78,.9)
-    ),
-    url("https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1600&q=80");
-
-  background-size: cover;
-  background-position: center;
-
-  color: white;
-
-  padding: 70px 8vw;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 30px;
-}
-
-.cta h2 {
-  margin: 6px 0;
-}
-
-.cta .section-label {
-  color: #e2e6dd;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  background: var(--dark2);
-
-  color: white;
-
-  padding: 70px 6vw 25px;
-
-  display: grid;
-
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-
-  gap: 40px;
-}
-
-footer h4 {
-  color: #aeb1a9;
-
-  font-size: 10px;
-
-  letter-spacing: .15em;
-
-  text-transform: uppercase;
-}
-
-footer a,
-footer span {
-  display: block;
-
-  color: #d4d6cf;
-
-  font-size: 12px;
-
-  margin: 8px 0;
-}
-
-footer a:hover {
-  color: white;
-}
-
-.footer-brand strong {
-  font-family: "Playfair Display", serif;
-
-  font-size: 23px;
-}
-
-.footer-brand p {
-  max-width: 260px;
-
-  color: #999d94;
-
-  font-size: 12px;
-}
-
-.footer-bottom {
-  grid-column: 1 / -1;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  border-top: 1px solid #34362f;
-
-  padding-top: 20px;
-
-  color: #777b72;
-
-  font-size: 10px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width: 900px) {
-
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .service-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .steps {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .about {
-    grid-template-columns: 1fr;
-  }
-
-  .booking {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-
-@media(max-width: 680px) {
-
-  .menu-button {
-    display: block;
-  }
-
-  nav {
-    display: none;
-
-    position: absolute;
-
-    top: 82px;
-
-    left: 0;
-    right: 0;
-
-    padding: 20px;
-
-    flex-direction: column;
-
-    align-items: stretch;
-
-    background: var(--paper);
-
-    border-bottom: 1px solid var(--line);
-  }
-
-  nav.open {
-    display: flex;
-  }
-
-  .hero {
-    padding-top: 55px;
-  }
-
-  .hero-image {
-    min-height: 430px;
-  }
-
-  .intro-grid,
-  .section-heading {
-    grid-template-columns: 1fr;
-
-    gap: 15px;
-  }
-
-  .features,
-  .service-grid,
-  .steps,
-  .options-box {
-    grid-template-columns: 1fr;
-  }
-
-  .options-box > div {
-    border-right: 0;
-
-    border-bottom: 1px solid var(--line);
-
-    padding-bottom: 20px;
-  }
-
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cta {
-    flex-direction: column;
-
-    align-items: flex-start;
-  }
-
-  footer {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .footer-brand,
-  .footer-bottom {
-    grid-column: 1 / -1;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws and Patience | Gentle Dog Care & Wellbeing Stanley</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0F172A; }
+        .font-rounded { font-family: 'Fredoka', cursive; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="text-slate-100 antialiased min-h-screen pb-28">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-teal-500 text-slate-950 text-[11px] font-extrabold py-2 px-4 text-center tracking-wider uppercase flex items-center justify-center gap-1.5">
+        <i class="fa-solid fa-heart text-slate-950"></i> Gentle At-Home Care & Solo Walks • Stanley & DH9
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 px-5 py-4">
+        <div class="max-w-md mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-lg font-bold font-rounded text-white tracking-wide uppercase flex items-center gap-1.5">
+                    <i class="fa-solid fa-paw text-teal-400"></i> Paws & Patience
+                </h1>
+                <p class="text-[9px] text-teal-300 font-bold uppercase tracking-widest">Dog Care & Wellbeing • Stanley</p>
+            </div>
+            <a href="tel:07881800686" class="bg-teal-500 hover:bg-teal-400 text-slate-950 text-xs px-3.5 py-2 rounded-lg font-black uppercase transition-all flex items-center gap-1.5 shadow-lg shadow-teal-500/20">
+                <i class="fa-solid fa-phone text-xs"></i> <span>Call Us</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-md mx-auto px-5 mt-6 space-y-8">
+
+        <!-- Hero Card -->
+        <section class="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80" alt="Gentle Dog Care" class="w-full h-56 object-cover brightness-[0.38]">
+            <div class="absolute inset-0 p-5 flex flex-col justify-end text-left space-y-2 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent">
+                <div class="inline-flex items-center gap-1.5 bg-slate-900/90 border border-teal-500/30 px-3 py-1 rounded-full text-[10px] uppercase font-bold text-teal-300">
+                    <i class="fa-solid fa-shield-cat text-teal-400"></i> Specialist in Anxious & Rescue Dogs
+                </div>
+                <h2 class="text-2xl font-bold font-rounded text-white leading-tight">
+                    Calm, Low-Stress Dog Wellbeing in Stanley
+                </h2>
+                <p class="text-[11px] text-slate-300 leading-relaxed">
+                    Zero busy group walks, no rush. Tailored 1-to-1 attention, ultrasound dental hygiene & gentle care in your own home.
+                </p>
+            </div>
+        </section>
+
+        <!-- Google / Local Reviews -->
+        <section class="space-y-3">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h3 class="text-sm font-bold font-rounded uppercase text-white tracking-wide">Client Reviews</h3>
+                    <p class="text-[10px] text-slate-400">Trusted by dog owners across Stanley & DH9</p>
+                </div>
+                <div class="flex items-center gap-1 bg-amber-500/10 border border-amber-500/30 px-2.5 py-1 rounded-lg">
+                    <i class="fa-solid fa-star text-amber-400 text-xs"></i>
+                    <span class="text-xs font-black text-amber-400">5.0</span>
+                    <span class="text-[9px] text-slate-400 font-bold">(Verified)</span>
+                </div>
+            </div>
+
+            <!-- Review Cards Carousel -->
+            <div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+                <div class="min-w-[260px] max-w-[260px] bg-slate-900/80 border border-slate-800 p-4 rounded-xl space-y-2.5">
+                    <div class="flex justify-between items-center">
+                        <div class="flex text-amber-400 text-[10px] gap-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-[9px] text-slate-500 font-bold">Local Owner</span>
+                    </div>
+                    <p class="text-[11px] text-slate-300 italic leading-snug">
+                        "Diane is amazing with nervous rescue dogs! She takes so much time to build trust. Absolute peace of mind."
+                    </p>
+                    <div class="flex items-center gap-2 pt-1 border-t border-slate-800/60">
+                        <div class="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center text-teal-400 text-[9px] font-bold">M</div>
+                        <span class="text-[10px] font-bold text-slate-200">Michelle K.</span>
+                    </div>
+                </div>
+
+                <div class="min-w-[260px] max-w-[260px] bg-slate-900/80 border border-slate-800 p-4 rounded-xl space-y-2.5">
+                    <div class="flex justify-between items-center">
+                        <div class="flex text-amber-400 text-[10px] gap-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-[9px] text-slate-500 font-bold">Dental Clean</span>
+                    </div>
+                    <p class="text-[11px] text-slate-300 italic leading-snug">
+                        "The Emmi-Pet teeth cleaning was unbelievable. No anesthesia and totally calm in our living room. Highly recommend!"
+                    </p>
+                    <div class="flex items-center gap-2 pt-1 border-t border-slate-800/60">
+                        <div class="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center text-teal-400 text-[9px] font-bold">S</div>
+                        <span class="text-[10px] font-bold text-slate-200">Sarah B.</span>
+                    </div>
+                </div>
+
+                <div class="min-w-[260px] max-w-[260px] bg-slate-900/80 border border-slate-800 p-4 rounded-xl space-y-2.5">
+                    <div class="flex justify-between items-center">
+                        <div class="flex text-amber-400 text-[10px] gap-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-[9px] text-slate-500 font-bold">1-to-1 Walks</span>
+                    </div>
+                    <p class="text-[11px] text-slate-300 italic leading-snug">
+                        "My dog struggles with other dogs, so finding a true 1-to-1 walker in DH9 was a lifesaver. Outstanding care!"
+                    </p>
+                    <div class="flex items-center gap-2 pt-1 border-t border-slate-800/60">
+                        <div class="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center text-teal-400 text-[9px] font-bold">D</div>
+                        <span class="text-[10px] font-bold text-slate-200">David T.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Extended Services Selection -->
+        <section class="space-y-4">
+            <div>
+                <h3 class="text-lg font-bold font-rounded uppercase text-white">Select Care & Services</h3>
+                <p class="text-xs text-slate-400">Choose a service to tailor your consultation booking.</p>
+            </div>
+
+            <div class="space-y-3.5">
+                
+                <!-- Fixed Image URL for Service 1 -->
+                <div onclick="selectService(this, 'Calm Meet & Greet Consultation', 'FREE')" class="service-card cursor-pointer bg-slate-900/90 border-2 border-teal-500 p-4 rounded-xl transition-all shadow-lg">
+                    <div class="flex gap-3">
+                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=300&q=80" alt="Dog Meet and Greet" class="w-16 h-16 rounded-lg object-cover border border-slate-700 shrink-0">
+                        <div class="flex-1 min-w-0">
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-xs font-bold text-white uppercase">Calm Meet & Greet</h4>
+                                <span class="text-xs font-black text-teal-400">FREE</span>
+                            </div>
+                            <p class="text-[10px] text-slate-400 mt-1 leading-snug">No-pressure home visit to let your dog get comfortable with us before any service.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div onclick="selectService(this, 'Anaesthesia-Free Dental Hygiene', '£25.00')" class="service-card cursor-pointer bg-slate-900/50 border border-slate-800 p-4 rounded-xl transition-all hover:border-slate-700">
+                    <div class="flex gap-3">
+                        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=300&q=80" alt="Dental Care" class="w-16 h-16 rounded-lg object-cover border border-slate-700 shrink-0">
+                        <div class="flex-1 min-w-0">
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-xs font-bold text-white uppercase">Ultrasound Dental Clean</h4>
+                                <span class="text-xs font-bold text-slate-200">£25.00</span>
+                            </div>
+                            <p class="text-[10px] text-slate-400 mt-1 leading-snug">Silent Emmi-Pet ultrasound teeth cleaning. Removes tartar without sedation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div onclick="selectService(this, '1-to-1 Solo Walk for Anxious Dogs', '£25.00')" class="service-card cursor-pointer bg-slate-900/50 border border-slate-800 p-4 rounded-xl transition-all hover:border-slate-700">
+                    <div class="flex gap-3">
+                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=300&q=80" alt="1 to 1 Dog Walk" class="w-16 h-16 rounded-lg object-cover border border-slate-700 shrink-0">
+                        <div class="flex-1 min-w-0">
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-xs font-bold text-white uppercase">Dedicated 1-to-1 Solo Walk</h4>
+                                <span class="text-xs font-bold text-slate-200">£25.00</span>
+                            </div>
+                            <p class="text-[10px] text-slate-400 mt-1 leading-snug">Strictly 1-to-1 walk tailored to reactive, timid, or energetic dogs. No group distractions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div onclick="selectService(this, 'Gentle At-Home Nail Trim', '£15.00')" class="service-card cursor-pointer bg-slate-900/50 border border-slate-800 p-4 rounded-xl transition-all hover:border-slate-700">
+                    <div class="flex gap-3">
+                        <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=300&q=80" alt="Nail Care" class="w-16 h-16 rounded-lg object-cover border border-slate-700 shrink-0">
+                        <div class="flex-1 min-w-0">
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-xs font-bold text-white uppercase">At-Home Nail Care</h4>
+                                <span class="text-xs font-bold text-slate-200">£15.00</span>
+                            </div>
+                            <p class="text-[10px] text-slate-400 mt-1 leading-snug">Patient, slow-paced nail clipping done at home where your dog feels safe.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div onclick="selectService(this, 'Senior Dog Comfort Visit', '£15.00')" class="service-card cursor-pointer bg-slate-900/50 border border-slate-800 p-4 rounded-xl transition-all hover:border-slate-700">
+                    <div class="flex gap-3">
+                        <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=300&q=80" alt="Senior Dog Care" class="w-16 h-16 rounded-lg object-cover border border-slate-700 shrink-0">
+                        <div class="flex-1 min-w-0">
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-xs font-bold text-white uppercase">Senior Dog Comfort Visit</h4>
+                                <span class="text-xs font-bold text-slate-200">£15.00</span>
+                            </div>
+                            <p class="text-[10px] text-slate-400 mt-1 leading-snug">Garden breaks, medication administration, feeding & gentle companionship.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div onclick="selectService(this, 'Puppy Desensitisation Visit', '£18.00')" class="service-card cursor-pointer bg-slate-900/50 border border-slate-800 p-4 rounded-xl transition-all hover:border-slate-700">
+                    <div class="flex gap-3">
+                        <img src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?auto=format&fit=crop&w=300&q=80" alt="Puppy Care" class="w-16 h-16 rounded-lg object-cover border border-slate-700 shrink-0">
+                        <div class="flex-1 min-w-0">
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-xs font-bold text-white uppercase">Puppy Confidence Visit</h4>
+                                <span class="text-xs font-bold text-slate-200">£18.00</span>
+                            </div>
+                            <p class="text-[10px] text-slate-400 mt-1 leading-snug">Gentle handling exercises, paw touching & sound desensitisation for young pups.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Request Form -->
+        <section class="bg-slate-900 border border-teal-500/40 p-6 rounded-2xl space-y-5 shadow-2xl">
+            <div class="border-b border-slate-800 pb-4 flex justify-between items-center">
+                <div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-teal-400">Selected Option</span>
+                    <p id="selected-service" class="text-xs font-bold text-white mt-0.5 uppercase">Calm Meet & Greet Consultation</p>
+                </div>
+                <div class="text-right">
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-teal-400">Price</span>
+                    <p id="est-price" class="text-sm font-bold text-teal-300">FREE</p>
+                </div>
+            </div>
+
+            <form onsubmit="event.preventDefault(); alert('Booking Enquiry Received!');" class="space-y-3.5">
+                <div>
+                    <label class="block text-[10px] font-bold text-slate-300 uppercase tracking-wider mb-1">Your Name</label>
+                    <input type="text" placeholder="e.g. Sarah Henderson" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-xs text-white outline-none focus:border-teal-400 transition-all">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold text-slate-300 uppercase tracking-wider mb-1">Dog's Name, Breed & Temperament</label>
+                    <input type="text" placeholder="e.g. Milo (Rescue Collie, very shy around strangers)" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-xs text-white outline-none focus:border-teal-400 transition-all">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold text-slate-300 uppercase tracking-wider mb-1">Your Mobile Number</label>
+                    <input type="tel" placeholder="e.g. 07123 456789" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-xs text-white outline-none focus:border-teal-400 transition-all">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold text-slate-300 uppercase tracking-wider mb-1">Location / Postcode (Stanley Area)</label>
+                    <input type="text" placeholder="e.g. Sunset View, Stanley" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-xs text-white outline-none focus:border-teal-400 transition-all">
+                </div>
+
+                <button type="submit" class="w-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-black py-3.5 rounded-lg text-xs uppercase tracking-wider transition-all mt-2 shadow-lg shadow-teal-500/20">
+                    Request Booking / Consultation <i class="fa-solid fa-paw ml-1"></i>
+                </button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center space-y-2 pt-4 border-t border-slate-800">
+            <p class="text-xs font-bold text-white uppercase font-rounded">Paws and Patience</p>
+            <p class="text-[11px] text-slate-400">30 Sunset View, Stanley, DH9 9LA</p>
+            <p class="text-[10px] text-slate-500">© DH9 Digital • Custom Mobile Client Prototype</p>
+        </footer>
+
+    </main>
+
+    <script>
+        function selectService(element, name, price) {
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.className = 'service-card cursor-pointer bg-slate-900/50 border border-slate-800 p-4 rounded-xl transition-all hover:border-slate-700';
+                const pTag = card.querySelector('span');
+                if(pTag) pTag.className = 'text-xs font-bold text-slate-200';
+            });
+
+            element.className = 'service-card cursor-pointer bg-slate-900/90 border-2 border-teal-500 p-4 rounded-xl transition-all shadow-lg';
+            const activePrice = element.querySelector('span');
+            if(activePrice) activePrice.className = 'text-xs font-black text-teal-400';
+
+            document.getElementById('selected-service').innerText = name;
+            document.getElementById('est-price').innerText = price;
+        }
+    </script>
+</body>
+</html>
