@@ -1,1116 +1,1240 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+:root {
+  --dark: #20211d;
+  --dark2: #151713;
+  --sage: #78836f;
+  --sage-dark: #56624e;
+  --cream: #f2eee5;
+  --paper: #fbfaf7;
+  --muted: #707169;
+  --line: #ddd9ce;
+  --white: #fff;
+  --gold: #b39a69;
+  --shadow: 0 25px 70px rgba(25, 27, 22, .12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--dark);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 9px 15px;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  height: 82px;
+  padding: 0 6vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: rgba(251,250,247,.95);
+  backdrop-filter: blur(15px);
+
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo .paw {
+  width: 44px;
+  height: 44px;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--sage);
+  border-radius: 50%;
+
+  font-size: 21px;
+}
+
+.logo strong {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.logo small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--sage-dark);
+}
+
+.nav-button {
+  padding: 11px 19px;
+  border: 1px solid var(--dark);
+  border-radius: 50px;
+}
+
+.menu-button {
+  display: none;
+  background: transparent;
+  border: 0;
+  font-size: 25px;
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+h1,
+h2 {
+  line-height: 1.04;
+}
+
+h1 {
+  font-size: clamp(58px, 7vw, 95px);
+  letter-spacing: -.05em;
+}
+
+h2 {
+  font-size: clamp(40px, 4vw, 60px);
+  letter-spacing: -.04em;
+}
 
-  <title>Paws & Patience | Dog Care in Stanley, County Durham</title>
+em {
+  color: var(--sage-dark);
+}
+
+.section {
+  max-width: 1240px;
+  margin: auto;
+  padding: 110px 5vw;
+}
+
+.section-label {
+  color: var(--sage-dark);
+  font-size: 10px;
+  letter-spacing: .2em;
+  font-weight: 700;
+}
+
 
-  <meta name="description"
-        content="Paws & Patience provides thoughtful, reliable dog care in Stanley and surrounding County Durham. Dog walks, home visits, puppy care and bespoke pet care.">
+/* =========================
+   BUTTONS
+========================= */
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  padding: 15px 23px;
 
-  <link rel="stylesheet" href="style.css">
-</head>
+  border-radius: 50px;
+  border: 1px solid transparent;
 
-<body>
+  font-size: 13px;
+  font-weight: 700;
 
-<!-- TOP BAR -->
-<div class="top-bar">
-  Thoughtful, dependable dog care in Stanley & surrounding County Durham
-</div>
+  cursor: pointer;
 
+  transition: .25s;
+}
 
-<!-- NAVIGATION -->
-<header class="header">
+.primary {
+  background: var(--dark);
+  color: white;
+}
 
-  <a href="#" class="logo">
-    <span class="paw">🐾</span>
+.primary:hover {
+  background: var(--sage-dark);
+  transform: translateY(-2px);
+}
 
-    <div>
-      <strong>Paws & Patience</strong>
-      <small>Dog care with a little more heart</small>
-    </div>
-  </a>
+.secondary {
+  border-color: var(--line);
+  background: white;
+}
 
-  <button class="menu-button" onclick="toggleMenu()">☰</button>
+.secondary:hover {
+  border-color: var(--dark);
+}
 
-  <nav id="navigation">
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#how">How it works</a>
-    <a href="#faq">FAQs</a>
-    <a href="#booking" class="nav-button">Enquire</a>
-  </nav>
+.light {
+  background: white;
+  color: var(--dark);
+}
 
-</header>
 
+/* =========================
+   HERO
+========================= */
 
-<main>
+.hero {
+  max-width: 1450px;
+  min-height: 690px;
 
+  margin: auto;
 
-<!-- HERO -->
-<section class="hero">
+  padding: 80px 6vw;
 
-  <div class="hero-content">
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: 70px;
 
-    <p class="eyebrow">STANLEY · COUNTY DURHAM</p>
+  align-items: center;
+}
 
-    <h1>
-      Care they can
-      <em>feel.</em>
-    </h1>
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
 
-    <p class="hero-description">
-      Calm, personal and dependable care for dogs who deserve
-      to be treated like family.
-    </p>
+.hero-description {
+  max-width: 560px;
 
-    <div class="hero-buttons">
+  color: var(--muted);
 
-      <a href="#booking" class="button primary">
-        Find the right service →
-      </a>
+  font-size: 18px;
 
-      <a href="#services" class="button secondary">
-        Explore services
-      </a>
+  margin: 25px 0 32px;
+}
 
-    </div>
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-    <div class="trust">
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 
-      <span>✓ Personal care</span>
-      <span>✓ Flexible options</span>
-      <span>✓ Local to Stanley</span>
+  margin-top: 27px;
 
-    </div>
+  color: var(--muted);
 
-  </div>
+  font-size: 12px;
+}
 
 
-  <div class="hero-image">
+/* REAL HERO IMAGE */
 
-    <div class="hero-overlay">
+.hero-image {
+  min-height: 570px;
 
-      <span>A calmer kind of care</span>
+  position: relative;
 
-      <h2>
-        Happy paws.<br>
-        Peace of mind.
-      </h2>
+  border-radius: 35px;
 
-    </div>
+  overflow: hidden;
 
-  </div>
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(15,20,14,.75),
+      rgba(15,20,14,.05) 65%
+    ),
+    url("https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1200&q=85");
 
-</section>
+  background-size: cover;
+  background-position: center;
 
+  box-shadow: var(--shadow);
+}
 
+.hero-image:before {
+  content: "";
 
-<!-- INTRO -->
-<section class="section intro">
+  position: absolute;
+  inset: 18px;
 
-  <p class="section-label">
-    THE PAWS & PATIENCE DIFFERENCE
-  </p>
+  border: 1px solid rgba(255,255,255,.35);
 
-  <div class="intro-grid">
+  border-radius: 25px;
 
-    <h2>
-      More than a walk.
-      <em>A relationship.</em>
-    </h2>
+  pointer-events: none;
+}
 
-    <p>
-      Every dog has their own personality, pace and preferences.
-      Our approach is built around patience, consistency and
-      genuinely getting to know the dogs in our care.
-    </p>
+.hero-overlay {
+  position: absolute;
 
-  </div>
+  left: 45px;
+  bottom: 42px;
 
+  color: white;
 
-  <div class="features">
+  max-width: 420px;
+}
 
-    <div class="feature">
+.hero-overlay span {
+  display: inline-block;
 
-      <span>01</span>
+  padding: 7px 13px;
 
-      <h3>Individual attention</h3>
+  border: 1px solid rgba(255,255,255,.45);
 
-      <p>
-        Care is shaped around your dog rather than a
-        one-size-fits-all routine.
-      </p>
+  border-radius: 50px;
 
-    </div>
+  background: rgba(0,0,0,.18);
 
+  backdrop-filter: blur(8px);
 
-    <div class="feature">
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
 
-      <span>02</span>
+.hero-overlay h2 {
+  color: white;
 
-      <h3>Clear communication</h3>
+  font-size: 48px;
 
-      <p>
-        Simple updates and an easy enquiry process keep
-        you in the loop.
-      </p>
+  margin: 16px 0 0;
+}
 
-    </div>
 
+/* =========================
+   INTRO
+========================= */
 
-    <div class="feature">
+.intro {
+  border-top: 1px solid var(--line);
+}
 
-      <span>03</span>
+.intro-grid,
+.section-heading {
+  display: grid;
+  grid-template-columns: 1fr .75fr;
 
-      <h3>Flexible support</h3>
+  gap: 70px;
 
-      <p>
-        Pick one service, combine options or ask for
-        something bespoke.
-      </p>
+  align-items: end;
+}
 
-    </div>
+.intro-grid p,
+.section-heading > p {
+  color: var(--muted);
+}
 
-  </div>
+.features {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
 
-</section>
+  gap: 25px;
 
+  margin-top: 70px;
+}
 
+.feature {
+  border-top: 1px solid var(--line);
 
-<!-- SERVICES -->
-<section id="services" class="services section">
+  padding-top: 22px;
+}
 
-  <div class="section-heading">
+.feature span {
+  color: var(--sage-dark);
 
-    <div>
+  font-size: 11px;
+  font-weight: 700;
+}
 
-      <p class="section-label">SERVICES</p>
+.feature h3 {
+  font-size: 20px;
 
-      <h2>
-        Choose what suits
-        <em>you.</em>
-      </h2>
+  margin: 18px 0 8px;
+}
 
-    </div>
+.feature p {
+  color: var(--muted);
 
-    <p>
-      Choose from our most popular services or ask about
-      creating something bespoke for your dog.
-    </p>
+  font-size: 13px;
+}
 
-  </div>
 
+/* =========================
+   SERVICES
+========================= */
 
-  <div class="service-grid">
+.services {
+  max-width: none;
 
+  background: var(--cream);
 
-    <article class="service-card featured">
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
 
-      <div class="service-icon">🐕</div>
+.service-grid {
+  max-width: 1250px;
 
-      <span class="popular">MOST POPULAR</span>
+  margin: 55px auto 0;
 
-      <h3>Solo Dog Walk</h3>
+  display: grid;
 
-      <p>
-        One-to-one exercise and enrichment with plenty
-        of attention.
-      </p>
+  grid-template-columns: repeat(3,1fr);
 
-      <ul>
-        <li>30 or 60 minutes</li>
-        <li>Solo routine</li>
-        <li>Photo/update available</li>
-      </ul>
+  gap: 20px;
+}
 
-      <a href="#booking" onclick="selectService('Solo Dog Walk')">
-        Select service →
-      </a>
+.service-card {
+  position: relative;
 
-    </article>
+  padding: 32px;
 
+  min-height: 390px;
 
+  background: var(--paper);
 
-    <article class="service-card">
+  border-radius: 25px;
 
-      <div class="service-icon">🏡</div>
+  border: 1px solid rgba(32,33,29,.08);
 
-      <h3>Home Visit</h3>
+  overflow: hidden;
 
-      <p>
-        A reassuring check-in for dogs who are happier
-        in their own space.
-      </p>
+  transition: .3s;
+}
 
-      <ul>
-        <li>Toilet break</li>
-        <li>Food & water</li>
-        <li>Play & companionship</li>
-      </ul>
+.service-card:hover {
+  transform: translateY(-7px);
 
-      <a href="#booking" onclick="selectService('Home Visit')">
-        Select service →
-      </a>
+  box-shadow: var(--shadow);
+}
 
-    </article>
+.service-card.featured {
+  background: var(--dark);
+  color: white;
+}
 
 
+/* little decorative image strip */
 
-    <article class="service-card">
+.service-card:after {
+  content: "";
 
-      <div class="service-icon">🐾</div>
+  position: absolute;
 
-      <h3>Puppy Care</h3>
+  right: -30px;
+  bottom: -35px;
 
-      <p>
-        Gentle, age-appropriate support for little paws
-        and big personalities.
-      </p>
+  width: 140px;
+  height: 140px;
 
-      <ul>
-        <li>Short visits</li>
-        <li>Routine support</li>
-        <li>Patience-first approach</li>
-      </ul>
+  border-radius: 50%;
 
-      <a href="#booking" onclick="selectService('Puppy Care')">
-        Select service →
-      </a>
+  background: var(--sage);
 
-    </article>
+  opacity: .08;
+}
 
+.service-icon {
+  font-size: 29px;
+}
 
+.popular {
+  float: right;
 
-    <article class="service-card">
+  color: #bdc7b5;
 
-      <div class="service-icon">🌿</div>
+  font-size: 9px;
+  letter-spacing: .13em;
+}
 
-      <h3>Adventure Walk</h3>
+.service-card h3 {
+  font-size: 29px;
 
-      <p>
-        Longer outings for dogs who love exploring
-        and sniffing new places.
-      </p>
+  margin: 24px 0 7px;
+}
 
-      <ul>
-        <li>60+ minute options</li>
-        <li>Enrichment focused</li>
-        <li>Tailored to ability</li>
-      </ul>
+.service-card p {
+  color: var(--muted);
 
-      <a href="#booking" onclick="selectService('Adventure Walk')">
-        Select service →
-      </a>
+  font-size: 13px;
+}
 
-    </article>
+.featured p {
+  color: #c7cac2;
+}
 
+.service-card ul {
+  list-style: none;
 
+  padding: 16px 0;
 
-    <article class="service-card">
+  margin: 20px 0;
 
-      <div class="service-icon">🌙</div>
+  border-top: 1px solid var(--line);
+}
 
-      <h3>Evening Visit</h3>
+.featured ul {
+  border-color: #44483f;
+}
 
-      <p>
-        A relaxed evening check-in when work or plans
-        keep you out.
-      </p>
+.service-card li {
+  color: var(--muted);
 
-      <ul>
-        <li>Companionship</li>
-        <li>Food & water</li>
-        <li>Bedtime routine</li>
-      </ul>
+  font-size: 12px;
 
-      <a href="#booking" onclick="selectService('Evening Visit')">
-        Select service →
-      </a>
+  margin: 8px 0;
+}
 
-    </article>
+.service-card li:before {
+  content: "✓";
 
+  margin-right: 8px;
 
+  color: var(--sage-dark);
+}
 
-    <article class="service-card">
+.featured li {
+  color: #c4c8bf;
+}
 
-      <div class="service-icon">✦</div>
+.service-card a {
+  position: absolute;
 
-      <h3>Bespoke Care</h3>
+  bottom: 28px;
 
-      <p>
-        Something a little different? Tell us what
-        you need.
-      </p>
+  font-size: 12px;
+  font-weight: 700;
+}
 
-      <ul>
-        <li>Multiple visits</li>
-        <li>Special routines</li>
-        <li>Custom requests</li>
-      </ul>
+.featured a {
+  color: white;
+}
 
-      <a href="#booking" onclick="selectService('Bespoke Care')">
-        Tell us what you need →
-      </a>
 
-    </article>
+/* =========================
+   HOW IT WORKS
+========================= */
 
-  </div>
+.steps {
+  display: grid;
 
-</section>
+  grid-template-columns: repeat(4,1fr);
 
+  gap: 20px;
 
+  margin-top: 55px;
+}
 
-<!-- HOW IT WORKS -->
-<section id="how" class="section how">
+.steps > div {
+  border-top: 1px solid var(--line);
 
-  <p class="section-label">
-    SIMPLE FROM START TO FINISH
-  </p>
+  padding-top: 22px;
+}
 
-  <h2>
-    Good care starts with
-    <em>listening.</em>
-  </h2>
+.steps span {
+  color: var(--sage-dark);
 
+  font-size: 11px;
+  font-weight: 700;
+}
 
-  <div class="steps">
+.steps h3 {
+  font-size: 18px;
 
-    <div>
-      <span>01</span>
-      <h3>Tell us about your dog</h3>
-      <p>
-        Share their breed, age, personality and routine.
-      </p>
-    </div>
+  margin: 17px 0 8px;
+}
 
-    <div>
-      <span>02</span>
-      <h3>Choose your care</h3>
-      <p>
-        Select the service and frequency that suits you.
-      </p>
-    </div>
+.steps p {
+  color: var(--muted);
 
-    <div>
-      <span>03</span>
-      <h3>Meet & settle in</h3>
-      <p>
-        We make introductions calmly and establish
-        what works.
-      </p>
-    </div>
+  font-size: 12px;
+}
 
-    <div>
-      <span>04</span>
-      <h3>Enjoy peace of mind</h3>
-      <p>
-        Your dog gets thoughtful care while you get
-        one less thing to worry about.
-      </p>
-    </div>
 
-  </div>
+/* =========================
+   ABOUT
+========================= */
 
-</section>
+.about {
+  display: grid;
 
+  grid-template-columns: .9fr 1.1fr;
 
+  gap: 80px;
 
-<!-- ABOUT -->
-<section id="about" class="about section">
+  align-items: center;
+}
 
-  <div class="about-image">
 
-    <span>🐾</span>
+/* ACTUAL IMAGE */
 
-    <strong>
-      Paws<br>
-      & Patience
-    </strong>
+.about-image {
+  height: 510px;
 
-    <small>
-      STANLEY · COUNTY DURHAM
-    </small>
+  position: relative;
 
-  </div>
+  display: flex;
+  flex-direction: column;
 
+  justify-content: flex-end;
 
-  <div class="about-content">
+  padding: 40px;
 
-    <p class="section-label">
-      WHY THE NAME?
-    </p>
+  color: white;
 
-    <h2>
-      Because some paws need a little more
-      <em>patience.</em>
-    </h2>
+  border-radius: 32px;
 
-    <p>
-      From bouncy puppies to nervous dogs, every dog
-      communicates differently.
-    </p>
+  overflow: hidden;
 
-    <p>
-      Paws & Patience is about giving them the time,
-      kindness and consistency they need to feel comfortable.
-    </p>
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(20,25,19,.8),
+      rgba(20,25,19,.05)
+    ),
+    url("https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=1000&q=85");
 
-    <blockquote>
-      “The best care is the care that makes both ends
-      of the lead feel happier.”
-    </blockquote>
+  background-size: cover;
 
-    <a href="#booking" class="text-link">
-      Start an enquiry →
-    </a>
+  background-position: center;
+}
 
-  </div>
+.about-image:after {
+  content: "";
 
-</section>
+  position: absolute;
 
+  inset: 18px;
 
+  border: 1px solid rgba(255,255,255,.35);
 
-<!-- OPTIONS -->
-<section class="section options">
+  border-radius: 23px;
+}
 
-  <div class="section-heading">
+.about-image .paw {
+  background: transparent;
 
-    <div>
+  position: relative;
+  z-index: 2;
 
-      <p class="section-label">
-        MAKE IT YOURS
-      </p>
+  font-size: 40px;
+}
 
-      <h2>
-        Build a care plan.
-      </h2>
+.about-image strong {
+  position: relative;
+  z-index: 2;
 
-    </div>
+  font-family: "Playfair Display", serif;
 
-    <p>
-      Mix and match the details below when you enquire.
-      We'll help create the right routine.
-    </p>
+  font-size: 44px;
 
-  </div>
+  line-height: .95;
 
+  margin: 10px 0;
+}
 
-  <div class="options-box">
+.about-image small {
+  position: relative;
+  z-index: 2;
 
-    <div>
+  font-size: 10px;
 
-      <h3>How often?</h3>
+  letter-spacing: .15em;
+}
 
-      <label>
-        <input type="radio" name="frequency">
-        One-off
-      </label>
+.about-content p {
+  color: var(--muted);
+}
 
-      <label>
-        <input type="radio" name="frequency">
-        Weekly
-      </label>
+blockquote {
+  border-left: 2px solid var(--sage);
 
-      <label>
-        <input type="radio" name="frequency">
-        2–3 times a week
-      </label>
+  padding-left: 20px;
 
-      <label>
-        <input type="radio" name="frequency">
-        Regular bespoke
-      </label>
+  margin: 30px 0;
 
-    </div>
+  font-family: "Playfair Display", serif;
 
+  font-style: italic;
 
-    <div>
+  color: var(--sage-dark);
+}
 
-      <h3>What does your dog enjoy?</h3>
+.text-link {
+  font-size: 13px;
+  font-weight: 700;
+}
 
-      <label>
-        <input type="checkbox">
-        Sniffing & exploring
-      </label>
 
-      <label>
-        <input type="checkbox">
-        Fetch & play
-      </label>
+/* =========================
+   OPTIONS
+========================= */
 
-      <label>
-        <input type="checkbox">
-        Quiet walks
-      </label>
+.options {
+  border-top: 1px solid var(--line);
+}
 
-      <label>
-        <input type="checkbox">
-        Companionship & cuddles
-      </label>
+.options-box {
+  margin-top: 50px;
 
-    </div>
+  padding: 35px;
 
+  display: grid;
 
-    <div>
+  grid-template-columns: repeat(3,1fr);
 
-      <h3>Anything to consider?</h3>
+  gap: 30px;
 
-      <label>
-        <input type="checkbox">
-        Puppy
-      </label>
+  background: white;
 
-      <label>
-        <input type="checkbox">
-        Nervous / anxious
-      </label>
+  border: 1px solid var(--line);
 
-      <label>
-        <input type="checkbox">
-        Reactive / needs space
-      </label>
+  border-radius: 26px;
 
-      <label>
-        <input type="checkbox">
-        Senior dog
-      </label>
+  box-shadow: 0 10px 40px rgba(0,0,0,.03);
+}
 
-    </div>
+.options-box > div {
+  border-right: 1px solid var(--line);
 
-  </div>
+  padding-right: 30px;
+}
 
-</section>
+.options-box > div:last-child {
+  border: 0;
+}
 
+.options-box h3 {
+  font-family: "DM Sans", sans-serif;
 
+  font-size: 14px;
+}
 
-<!-- BOOKING -->
-<section id="booking" class="booking section">
+.options-box label {
+  display: block;
 
-  <div class="booking-intro">
+  padding: 9px 0;
 
-    <p class="section-label">
-      ENQUIRE & BOOK
-    </p>
+  color: var(--muted);
 
-    <h2>
-      Let's talk about
-      <em>your dog.</em>
-    </h2>
+  font-size: 12px;
+}
 
-    <p>
-      Complete the form and tell us a little about what
-      you're looking for.
-    </p>
 
-    <div class="contact-box">
+/* =========================
+   BOOKING
+========================= */
 
-      <span>Prefer to speak?</span>
+.booking {
+  max-width: none;
 
-      <strong>
-        07377 527035
-      </strong>
+  display: grid;
 
-      <small>
-        Replace this number with your confirmed business number.
-      </small>
+  grid-template-columns: .75fr 1.25fr;
 
-    </div>
+  gap: 75px;
 
-  </div>
+  background: var(--dark);
 
+  color: white;
 
-  <form id="booking-form" class="booking-form">
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
 
-    <div class="progress">
-      <span class="active"></span>
-      <span></span>
-      <span></span>
-    </div>
+.booking-intro p {
+  color: #bfc2ba;
+}
 
+.contact-box {
+  margin-top: 35px;
 
-    <!-- STEP 1 -->
+  padding: 20px;
 
-    <div class="form-step active">
+  border: 1px solid #454840;
 
-      <small>STEP 1 OF 3</small>
+  border-radius: 17px;
+}
 
-      <h3>
-        Tell us about you
-      </h3>
+.contact-box span,
+.contact-box small {
+  display: block;
 
-      <div class="form-grid">
+  color: #aeb1a9;
 
-        <label>
-          First name
-          <input
-            required
-            name="name"
-            placeholder="Your name"
-          >
-        </label>
+  font-size: 11px;
+}
 
-        <label>
-          Phone
-          <input
-            required
-            name="phone"
-            type="tel"
-            placeholder="07..."
-          >
-        </label>
+.contact-box strong {
+  display: block;
 
-      </div>
+  margin: 3px 0;
 
+  font-size: 21px;
+}
 
-      <label>
-        Email
-        <input
-          required
-          name="email"
-          type="email"
-          placeholder="you@example.com"
-        >
-      </label>
+.booking-form {
+  background: var(--paper);
 
+  color: var(--dark);
 
-      <button
-        type="button"
-        class="button primary next"
-      >
-        Continue →
-      </button>
+  border-radius: 28px;
 
-    </div>
+  padding: 35px;
+}
 
+.progress {
+  display: flex;
 
+  gap: 7px;
 
-    <!-- STEP 2 -->
+  margin-bottom: 30px;
+}
 
-    <div class="form-step">
+.progress span {
+  flex: 1;
 
-      <small>STEP 2 OF 3</small>
+  height: 3px;
 
-      <h3>
-        Tell us about your dog
-      </h3>
+  background: var(--line);
+}
 
+.progress .active {
+  background: var(--sage-dark);
+}
 
-      <div class="form-grid">
+.form-step {
+  display: none;
+}
 
-        <label>
-          Dog's name
-          <input
-            required
-            name="dog"
-            placeholder="Their name"
-          >
-        </label>
+.form-step.active {
+  display: block;
+}
 
-        <label>
-          Breed / mix
-          <input
-            name="breed"
-            placeholder="e.g. Cocker Spaniel"
-          >
-        </label>
+.form-step > small {
+  color: var(--sage-dark);
 
-      </div>
+  font-size: 10px;
 
+  letter-spacing: .15em;
 
-      <div class="form-grid">
+  font-weight: 700;
+}
 
-        <label>
-          Age
-          <input
-            name="age"
-            placeholder="e.g. 4 years"
-          >
-        </label>
+.form-step h3 {
+  font-size: 32px;
+}
 
+.form-grid {
+  display: grid;
 
-        <label>
-          Preferred service
+  grid-template-columns: 1fr 1fr;
 
-          <select
-            required
-            name="service"
-            id="service"
-          >
+  gap: 15px;
+}
 
-            <option value="">
-              Choose...
-            </option>
+.booking-form label {
+  display: block;
 
-            <option>
-              Solo Dog Walk
-            </option>
+  margin-bottom: 17px;
 
-            <option>
-              Home Visit
-            </option>
+  font-size: 11px;
 
-            <option>
-              Puppy Care
-            </option>
+  font-weight: 700;
+}
 
-            <option>
-              Adventure Walk
-            </option>
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  display: block;
 
-            <option>
-              Evening Visit
-            </option>
+  width: 100%;
 
-            <option>
-              Bespoke Care
-            </option>
+  margin-top: 7px;
 
-          </select>
+  padding: 14px;
 
-        </label>
+  border: 1px solid var(--line);
 
-      </div>
+  border-radius: 12px;
 
+  background: white;
 
-      <label>
-        Anything we should know?
+  outline: none;
+}
 
-        <textarea
-          name="notes"
-          rows="4"
-          placeholder="Temperament, routine, recall, allergies, mobility..."
-        ></textarea>
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  border-color: var(--sage-dark);
 
-      </label>
+  box-shadow: 0 0 0 3px rgba(120,131,111,.1);
+}
 
+.form-buttons {
+  display: flex;
 
-      <div class="form-buttons">
+  justify-content: space-between;
 
-        <button
-          type="button"
-          class="button secondary back"
-        >
-          ← Back
-        </button>
+  gap: 10px;
+}
 
-        <button
-          type="button"
-          class="button primary next"
-        >
-          Continue →
-        </button>
+.success {
+  display: none;
 
-      </div>
+  text-align: center;
 
-    </div>
+  padding: 60px 10px;
+}
 
+.success-icon {
+  width: 60px;
+  height: 60px;
 
+  margin: auto;
 
-    <!-- STEP 3 -->
+  display: grid;
+  place-items: center;
 
-    <div class="form-step">
+  background: var(--sage);
 
-      <small>STEP 3 OF 3</small>
+  color: white;
 
-      <h3>
-        When would you like care?
-      </h3>
+  border-radius: 50%;
 
+  font-size: 25px;
+}
 
-      <div class="form-grid">
+.success h3 {
+  font-size: 32px;
+}
 
-        <label>
-          Preferred date
+.success p {
+  color: var(--muted);
+}
 
-          <input
-            required
-            type="date"
-            name="date"
-          >
 
-        </label>
+/* =========================
+   FAQ
+========================= */
 
+.faq {
+  border-top: 1px solid var(--line);
+}
 
-        <label>
-          Preferred time
+.faq-list {
+  margin-top: 45px;
 
-          <select name="time">
+  border-top: 1px solid var(--line);
+}
 
-            <option>Morning</option>
-            <option>Midday</option>
-            <option>Afternoon</option>
-            <option>Evening</option>
-            <option>Flexible</option>
+details {
+  border-bottom: 1px solid var(--line);
 
-          </select>
+  padding: 21px 0;
+}
 
-        </label>
+summary {
+  cursor: pointer;
 
-      </div>
+  display: flex;
 
+  justify-content: space-between;
 
-      <label>
-        Anything else?
+  font-size: 14px;
 
-        <textarea
-          name="message"
-          rows="4"
-          placeholder="Tell us about your ideal routine, frequency or any questions."
-        ></textarea>
+  font-weight: 700;
+}
 
-      </label>
+details p {
+  max-width: 700px;
 
+  color: var(--muted);
 
-      <div class="form-buttons">
+  font-size: 13px;
+}
 
-        <button
-          type="button"
-          class="button secondary back"
-        >
-          ← Back
-        </button>
 
-        <button
-          class="button primary"
-          type="submit"
-        >
-          Send enquiry →
-        </button>
+/* =========================
+   FINAL CTA
+========================= */
 
-      </div>
+.cta {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(70,82,62,.96),
+      rgba(86,98,78,.9)
+    ),
+    url("https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1600&q=80");
 
-    </div>
+  background-size: cover;
+  background-position: center;
 
+  color: white;
 
-    <!-- SUCCESS -->
+  padding: 70px 8vw;
 
-    <div class="success">
+  display: flex;
 
-      <div class="success-icon">
-        ✓
-      </div>
+  align-items: center;
 
-      <h3>
-        Thanks!
-      </h3>
+  justify-content: space-between;
 
-      <p>
-        Your enquiry has been completed.
-      </p>
+  gap: 30px;
+}
 
-      <p class="small">
-        Connect this form to your preferred email/form service
-        before launching the website.
-      </p>
+.cta h2 {
+  margin: 6px 0;
+}
 
-    </div>
+.cta .section-label {
+  color: #e2e6dd;
+}
 
-  </form>
 
-</section>
+/* =========================
+   FOOTER
+========================= */
 
+footer {
+  background: var(--dark2);
 
+  color: white;
 
-<!-- FAQ -->
-<section id="faq" class="section faq">
+  padding: 70px 6vw 25px;
 
-  <p class="section-label">
-    QUESTIONS
-  </p>
+  display: grid;
 
-  <h2>
-    Good to <em>know.</em>
-  </h2>
+  grid-template-columns: 2fr 1fr 1fr 1fr;
 
+  gap: 40px;
+}
 
-  <div class="faq-list">
+footer h4 {
+  color: #aeb1a9;
 
-    <details>
-      <summary>
-        Do you offer one-off bookings?
-      </summary>
+  font-size: 10px;
 
-      <p>
-        Yes. One-off services can be requested through
-        the enquiry form and are subject to availability.
-      </p>
+  letter-spacing: .15em;
 
-    </details>
+  text-transform: uppercase;
+}
 
+footer a,
+footer span {
+  display: block;
 
-    <details>
-      <summary>
-        Can you look after nervous or reactive dogs?
-      </summary>
+  color: #d4d6cf;
 
-      <p>
-        Every dog is different. Tell us about your dog's
-        needs when enquiring so we can discuss the most
-        suitable approach.
-      </p>
+  font-size: 12px;
 
-    </details>
+  margin: 8px 0;
+}
 
+footer a:hover {
+  color: white;
+}
 
-    <details>
-      <summary>
-        Do you cover areas outside Stanley?
-      </summary>
+.footer-brand strong {
+  font-family: "Playfair Display", serif;
 
-      <p>
-        Coverage can vary. Include your postcode or area
-        in your enquiry and we can confirm availability.
-      </p>
+  font-size: 23px;
+}
 
-    </details>
+.footer-brand p {
+  max-width: 260px;
 
+  color: #999d94;
 
-    <details>
-      <summary>
-        How much does it cost?
-      </summary>
+  font-size: 12px;
+}
 
-      <p>
-        Pricing can depend on the service, duration,
-        frequency and travel. Contact us for current prices.
-      </p>
+.footer-bottom {
+  grid-column: 1 / -1;
 
-    </details>
+  display: flex;
 
+  justify-content: space-between;
 
-    <details>
-      <summary>
-        Can I request a regular weekly slot?
-      </summary>
+  border-top: 1px solid #34362f;
 
-      <p>
-        Yes. Regular bookings can be discussed and are
-        subject to availability.
-      </p>
+  padding-top: 20px;
 
-    </details>
+  color: #777b72;
 
-  </div>
+  font-size: 10px;
+}
 
-</section>
 
+/* =========================
+   MOBILE
+========================= */
 
+@media(max-width: 900px) {
 
-<!-- CTA -->
-<section class="cta">
+  .hero {
+    grid-template-columns: 1fr;
+  }
 
-  <div>
+  .service-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    <p class="section-label">
-      PAWS & PATIENCE
-    </p>
+  .steps {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    <h2>
-      Ready to make their day?
-    </h2>
+  .about {
+    grid-template-columns: 1fr;
+  }
 
-  </div>
+  .booking {
+    grid-template-columns: 1fr;
+  }
 
-  <a href="#booking" class="button light">
-    Start an enquiry →
-  </a>
+}
 
-</section>
 
-</main>
+@media(max-width: 680px) {
 
+  .menu-button {
+    display: block;
+  }
 
+  nav {
+    display: none;
 
-<!-- FOOTER -->
-<footer>
+    position: absolute;
 
-  <div class="footer-brand">
+    top: 82px;
 
-    <div class="paw">
-      🐾
-    </div>
+    left: 0;
+    right: 0;
 
-    <strong>
-      Paws & Patience
-    </strong>
+    padding: 20px;
 
-    <p>
-      Thoughtful dog care in Stanley,
-      County Durham.
-    </p>
+    flex-direction: column;
 
-  </div>
+    align-items: stretch;
 
+    background: var(--paper);
 
-  <div>
+    border-bottom: 1px solid var(--line);
+  }
 
-    <h4>Explore</h4>
+  nav.open {
+    display: flex;
+  }
 
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#faq">FAQs</a>
+  .hero {
+    padding-top: 55px;
+  }
 
-  </div>
+  .hero-image {
+    min-height: 430px;
+  }
 
+  .intro-grid,
+  .section-heading {
+    grid-template-columns: 1fr;
 
-  <div>
+    gap: 15px;
+  }
 
-    <h4>Contact</h4>
+  .features,
+  .service-grid,
+  .steps,
+  .options-box {
+    grid-template-columns: 1fr;
+  }
 
-    <a href="tel:07377527035">
-      07377 527035
-    </a>
+  .options-box > div {
+    border-right: 0;
 
-    <a href="#booking">
-      Make an enquiry
-    </a>
+    border-bottom: 1px solid var(--line);
 
-    <span>
-      Stanley, County Durham
-    </span>
+    padding-bottom: 20px;
+  }
 
-  </div>
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
 
+  .cta {
+    flex-direction: column;
 
-  <div>
+    align-items: flex-start;
+  }
 
-    <h4>Social</h4>
+  footer {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    <a href="#">
-      Instagram
-    </a>
+  .footer-brand,
+  .footer-bottom {
+    grid-column: 1 / -1;
+  }
 
-    <a href="#">
-      Facebook
-    </a>
+  .footer-bottom {
+    flex-direction: column;
+    gap: 5px;
+  }
 
-  </div>
-
-
-  <div class="footer-bottom">
-
-    <span>
-      © <span id="year"></span>
-      Paws & Patience
-    </span>
-
-    <span>
-      Built with care.
-    </span>
-
-  </div>
-
-</footer>
-
-
-<script src="script.js"></script>
-
-</body>
-</html>
+}
