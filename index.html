@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws and Patience | Gentle Pet Wellbeing Stanley</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0F172A; }
+        .font-rounded { font-family: 'Fredoka', cursive; }
+    </style>
+</head>
+<body class="text-slate-100 antialiased min-h-screen pb-24">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-teal-500 text-slate-950 text-[11px] font-bold py-2 px-4 text-center tracking-wider uppercase">
+        <i class="fa-solid fa-heart mr-1"></i> Gentle, 1-to-1 Mobile Pet Wellbeing • Stanley & DH9
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 px-5 py-4">
+        <div class="max-w-md mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-lg font-bold font-rounded text-white tracking-wide uppercase flex items-center gap-1.5">
+                    <i class="fa-solid fa-paw text-teal-400"></i> Paws & Patience
+                </h1>
+                <p class="text-[9px] text-teal-300 font-bold uppercase tracking-widest">Dog Care & Wellbeing • Stanley</p>
+            </div>
+            <a href="tel:07881800686" class="bg-teal-500 hover:bg-teal-400 text-slate-950 text-xs px-3.5 py-2 rounded-lg font-bold uppercase transition-all flex items-center gap-1.5">
+                <i class="fa-solid fa-phone text-xs"></i> <span>Call Us</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-md mx-auto px-5 mt-6 space-y-8">
+
+        <!-- Hero Card -->
+        <section class="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80" alt="Happy Dog" class="w-full h-52 object-cover brightness-[0.4]">
+            <div class="absolute inset-0 p-5 flex flex-col justify-end text-left space-y-2 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent">
+                <div class="inline-flex items-center gap-2 bg-slate-900/90 border border-teal-500/30 px-3 py-1 rounded-full text-[10px] uppercase font-bold text-teal-300">
+                    <i class="fa-solid fa-shield-cat text-teal-400"></i> Calm & Patient 1-to-1 Care
+                </div>
+                <h2 class="text-2xl font-bold font-rounded text-white leading-tight">
+                    Dedicated Mobile Dog Care in Stanley
+                </h2>
+                <p class="text-[11px] text-slate-300">
+                    Specialist gentle care, solo walks, and stress-free teeth cleaning for nervous or reactive dogs.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="space-y-4">
+            <div>
+                <h3 class="text-lg font-bold font-rounded uppercase text-white">Our Wellbeing Services</h3>
+                <p class="text-xs text-slate-400">Select a service to request an initial consultation or booking.</p>
+            </div>
+
+            <div class="space-y-3">
+                
+                <div onclick="selectService(this, 'Gentle Ultrasound Teeth Cleaning', '£40.00')" class="service-card cursor-pointer bg-slate-900/90 border-2 border-teal-500 p-4 rounded-xl transition-all flex justify-between items-center shadow-lg">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 shrink-0">
+                            <i class="fa-solid fa-tooth text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-white uppercase">Ultrasound Teeth Cleaning</h4>
+                            <p class="text-[10px] text-slate-400">Silent, non-invasive tartar removal for dogs.</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-bold text-teal-400 shrink-0 ml-2">£40.00</span>
+                </div>
+
+                <div onclick="selectService(this, '1-to-1 Solo Walk (45 Mins)', '£15.00')" class="service-card cursor-pointer bg-slate-900/50 border border-slate-800 p-4 rounded-xl transition-all flex justify-between items-center hover:border-slate-700">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 shrink-0">
+                            <i class="fa-solid fa-person-walking-with-cane text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-white uppercase">Solo Focused Walk</h4>
+                            <p class="text-[10px] text-slate-400">1-to-1 walk tailored for anxious or quiet dogs.</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-bold text-slate-200 shrink-0 ml-2">£15.00</span>
+                </div>
+
+                <div onclick="selectService(this, 'Puppy / Senior Home Visit', '£12.00')" class="service-card cursor-pointer bg-slate-900/50 border border-slate-800 p-4 rounded-xl transition-all flex justify-between items-center hover:border-slate-700">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 shrink-0">
+                            <i class="fa-solid fa-house-chimney-window text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-white uppercase">Comfort Home Visit</h4>
+                            <p class="text-[10px] text-slate-400">Feeding, garden play, medication & companionship.</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-bold text-slate-200 shrink-0 ml-2">£12.00</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Booking Panel -->
+        <section class="bg-slate-900 border border-teal-500/40 p-6 rounded-2xl space-y-5 shadow-2xl">
+            <div class="border-b border-slate-800 pb-4 flex justify-between items-center">
+                <div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-teal-400">Selected Service</span>
+                    <p id="selected-service" class="text-xs font-bold text-white mt-0.5 uppercase">Gentle Ultrasound Teeth Cleaning</p>
+                </div>
+                <div class="text-right">
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-teal-400">Price</span>
+                    <p id="est-price" class="text-sm font-bold text-teal-300">£40.00</p>
+                </div>
+            </div>
+
+            <form onsubmit="event.preventDefault(); alert('Request Sent!');" class="space-y-3.5">
+                <div>
+                    <label class="block text-[10px] font-bold text-slate-300 uppercase tracking-wider mb-1">Your Name</label>
+                    <input type="text" placeholder="e.g. Lisa Smith" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-xs text-white outline-none focus:border-teal-400 transition-all">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold text-slate-300 uppercase tracking-wider mb-1">Dog's Name & Breed</label>
+                    <input type="text" placeholder="e.g. Buster (Cockapoo)" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-xs text-white outline-none focus:border-teal-400 transition-all">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold text-slate-300 uppercase tracking-wider mb-1">Phone Number</label>
+                    <input type="tel" placeholder="e.g. 07123 456789" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-xs text-white outline-none focus:border-teal-400 transition-all">
+                </div>
+
+                <button type="submit" class="w-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold py-3.5 rounded-lg text-xs uppercase tracking-wider transition-all mt-2">
+                    Request Booking <i class="fa-solid fa-paw ml-1"></i>
+                </button>
+            </form>
+        </section>
+
+        <footer class="text-center space-y-2 pt-4 border-t border-slate-800">
+            <p class="text-xs font-bold text-white uppercase font-rounded">Paws and Patience</p>
+            <p class="text-[11px] text-slate-400">Stanley, DH9 9LA</p>
+        </footer>
+
+    </main>
+
+    <script>
+        function selectService(element, name, price) {
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.className = 'service-card cursor-pointer bg-slate-900/50 border border-slate-800 p-4 rounded-xl transition-all flex justify-between items-center hover:border-slate-700';
+                const icon = card.querySelector('div > div');
+                if(icon) icon.className = 'w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 shrink-0';
+                const pTag = card.querySelector('span');
+                if(pTag) pTag.className = 'text-xs font-bold text-slate-200 shrink-0 ml-2';
+            });
+
+            element.className = 'service-card cursor-pointer bg-slate-900/90 border-2 border-teal-500 p-4 rounded-xl transition-all flex justify-between items-center shadow-lg';
+            const activeIcon = element.querySelector('div > div');
+            if(activeIcon) activeIcon.className = 'w-10 h-10 rounded-lg bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 shrink-0';
+            const activePrice = element.querySelector('span');
+            if(activePrice) activePrice.className = 'text-xs font-bold text-teal-400 shrink-0 ml-2';
+
+            document.getElementById('selected-service').innerText = name;
+            document.getElementById('est-price').innerText = price;
+        }
+    </script>
+</body>
+</html>
