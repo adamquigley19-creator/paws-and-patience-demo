@@ -1,282 +1,1116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paws and Patience | Gentle Dog Care & Wellbeing Stanley</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0F172A; }
-        .font-rounded { font-family: 'Fredoka', cursive; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    </style>
-</head>
-<body class="text-slate-100 antialiased min-h-screen pb-28">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-teal-500 text-slate-950 text-[11px] font-extrabold py-2 px-4 text-center tracking-wider uppercase flex items-center justify-center gap-1.5">
-        <i class="fa-solid fa-heart text-slate-950"></i> Gentle At-Home Care & Solo Walks • Stanley & DH9
+  <title>Paws & Patience | Dog Care in Stanley, County Durham</title>
+
+  <meta name="description"
+        content="Paws & Patience provides thoughtful, reliable dog care in Stanley and surrounding County Durham. Dog walks, home visits, puppy care and bespoke pet care.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  Thoughtful, dependable dog care in Stanley & surrounding County Durham
+</div>
+
+
+<!-- NAVIGATION -->
+<header class="header">
+
+  <a href="#" class="logo">
+    <span class="paw">🐾</span>
+
+    <div>
+      <strong>Paws & Patience</strong>
+      <small>Dog care with a little more heart</small>
+    </div>
+  </a>
+
+  <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+  <nav id="navigation">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#how">How it works</a>
+    <a href="#faq">FAQs</a>
+    <a href="#booking" class="nav-button">Enquire</a>
+  </nav>
+
+</header>
+
+
+<main>
+
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-content">
+
+    <p class="eyebrow">STANLEY · COUNTY DURHAM</p>
+
+    <h1>
+      Care they can
+      <em>feel.</em>
+    </h1>
+
+    <p class="hero-description">
+      Calm, personal and dependable care for dogs who deserve
+      to be treated like family.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#booking" class="button primary">
+        Find the right service →
+      </a>
+
+      <a href="#services" class="button secondary">
+        Explore services
+      </a>
+
     </div>
 
-    <!-- Header -->
-    <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 px-5 py-4">
-        <div class="max-w-md mx-auto flex justify-between items-center">
-            <div>
-                <h1 class="text-lg font-bold font-rounded text-white tracking-wide uppercase flex items-center gap-1.5">
-                    <i class="fa-solid fa-paw text-teal-400"></i> Paws & Patience
-                </h1>
-                <p class="text-[9px] text-teal-300 font-bold uppercase tracking-widest">Dog Care & Wellbeing • Stanley</p>
-            </div>
-            <a href="tel:07881800686" class="bg-teal-500 hover:bg-teal-400 text-slate-950 text-xs px-3.5 py-2 rounded-lg font-black uppercase transition-all flex items-center gap-1.5 shadow-lg shadow-teal-500/20">
-                <i class="fa-solid fa-phone text-xs"></i> <span>Call Us</span>
-            </a>
-        </div>
-    </header>
+    <div class="trust">
 
-    <main class="max-w-md mx-auto px-5 mt-6 space-y-8">
+      <span>✓ Personal care</span>
+      <span>✓ Flexible options</span>
+      <span>✓ Local to Stanley</span>
 
-        <!-- Hero Card -->
-        <section class="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80" alt="Gentle Dog Care" class="w-full h-56 object-cover brightness-[0.38]">
-            <div class="absolute inset-0 p-5 flex flex-col justify-end text-left space-y-2 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent">
-                <div class="inline-flex items-center gap-1.5 bg-slate-900/90 border border-teal-500/30 px-3 py-1 rounded-full text-[10px] uppercase font-bold text-teal-300">
-                    <i class="fa-solid fa-shield-cat text-teal-400"></i> Specialist in Anxious & Rescue Dogs
-                </div>
-                <h2 class="text-2xl font-bold font-rounded text-white leading-tight">
-                    Calm, Low-Stress Dog Wellbeing in Stanley
-                </h2>
-                <p class="text-[11px] text-slate-300 leading-relaxed">
-                    Zero busy group walks, no rush. Tailored 1-to-1 attention, ultrasound dental hygiene & gentle care in your own home.
-                </p>
-            </div>
-        </section>
+    </div>
 
-        <!-- Google / Local Reviews -->
-        <section class="space-y-3">
-            <div class="flex items-center justify-between">
-                <div>
-                    <h3 class="text-sm font-bold font-rounded uppercase text-white tracking-wide">Client Reviews</h3>
-                    <p class="text-[10px] text-slate-400">Trusted by dog owners across Stanley & DH9</p>
-                </div>
-                <div class="flex items-center gap-1 bg-amber-500/10 border border-amber-500/30 px-2.5 py-1 rounded-lg">
-                    <i class="fa-solid fa-star text-amber-400 text-xs"></i>
-                    <span class="text-xs font-black text-amber-400">5.0</span>
-                    <span class="text-[9px] text-slate-400 font-bold">(Verified)</span>
-                </div>
-            </div>
+  </div>
 
-            <!-- Review Cards Carousel -->
-            <div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
-                <div class="min-w-[260px] max-w-[260px] bg-slate-900/80 border border-slate-800 p-4 rounded-xl space-y-2.5">
-                    <div class="flex justify-between items-center">
-                        <div class="flex text-amber-400 text-[10px] gap-0.5">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="text-[9px] text-slate-500 font-bold">Local Owner</span>
-                    </div>
-                    <p class="text-[11px] text-slate-300 italic leading-snug">
-                        "Diane is amazing with nervous rescue dogs! She takes so much time to build trust. Absolute peace of mind."
-                    </p>
-                    <div class="flex items-center gap-2 pt-1 border-t border-slate-800/60">
-                        <div class="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center text-teal-400 text-[9px] font-bold">M</div>
-                        <span class="text-[10px] font-bold text-slate-200">Michelle K.</span>
-                    </div>
-                </div>
 
-                <div class="min-w-[260px] max-w-[260px] bg-slate-900/80 border border-slate-800 p-4 rounded-xl space-y-2.5">
-                    <div class="flex justify-between items-center">
-                        <div class="flex text-amber-400 text-[10px] gap-0.5">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="text-[9px] text-slate-500 font-bold">Dental Clean</span>
-                    </div>
-                    <p class="text-[11px] text-slate-300 italic leading-snug">
-                        "The Emmi-Pet teeth cleaning was unbelievable. No anesthesia and totally calm in our living room. Highly recommend!"
-                    </p>
-                    <div class="flex items-center gap-2 pt-1 border-t border-slate-800/60">
-                        <div class="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center text-teal-400 text-[9px] font-bold">S</div>
-                        <span class="text-[10px] font-bold text-slate-200">Sarah B.</span>
-                    </div>
-                </div>
+  <div class="hero-image">
 
-                <div class="min-w-[260px] max-w-[260px] bg-slate-900/80 border border-slate-800 p-4 rounded-xl space-y-2.5">
-                    <div class="flex justify-between items-center">
-                        <div class="flex text-amber-400 text-[10px] gap-0.5">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="text-[9px] text-slate-500 font-bold">1-to-1 Walks</span>
-                    </div>
-                    <p class="text-[11px] text-slate-300 italic leading-snug">
-                        "My dog struggles with other dogs, so finding a true 1-to-1 walker in DH9 was a lifesaver. Outstanding care!"
-                    </p>
-                    <div class="flex items-center gap-2 pt-1 border-t border-slate-800/60">
-                        <div class="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center text-teal-400 text-[9px] font-bold">D</div>
-                        <span class="text-[10px] font-bold text-slate-200">David T.</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="hero-overlay">
 
-        <!-- Extended Services Selection -->
-        <section class="space-y-4">
-            <div>
-                <h3 class="text-lg font-bold font-rounded uppercase text-white">Select Care & Services</h3>
-                <p class="text-xs text-slate-400">Choose a service to tailor your consultation booking.</p>
-            </div>
+      <span>A calmer kind of care</span>
 
-            <div class="space-y-3.5">
-                
-                <!-- Fixed Image URL for Service 1 -->
-                <div onclick="selectService(this, 'Calm Meet & Greet Consultation', 'FREE')" class="service-card cursor-pointer bg-slate-900/90 border-2 border-teal-500 p-4 rounded-xl transition-all shadow-lg">
-                    <div class="flex gap-3">
-                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=300&q=80" alt="Dog Meet and Greet" class="w-16 h-16 rounded-lg object-cover border border-slate-700 shrink-0">
-                        <div class="flex-1 min-w-0">
-                            <div class="flex justify-between items-start">
-                                <h4 class="text-xs font-bold text-white uppercase">Calm Meet & Greet</h4>
-                                <span class="text-xs font-black text-teal-400">FREE</span>
-                            </div>
-                            <p class="text-[10px] text-slate-400 mt-1 leading-snug">No-pressure home visit to let your dog get comfortable with us before any service.</p>
-                        </div>
-                    </div>
-                </div>
+      <h2>
+        Happy paws.<br>
+        Peace of mind.
+      </h2>
 
-                <!-- Service 2 -->
-                <div onclick="selectService(this, 'Anaesthesia-Free Dental Hygiene', '£25.00')" class="service-card cursor-pointer bg-slate-900/50 border border-slate-800 p-4 rounded-xl transition-all hover:border-slate-700">
-                    <div class="flex gap-3">
-                        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=300&q=80" alt="Dental Care" class="w-16 h-16 rounded-lg object-cover border border-slate-700 shrink-0">
-                        <div class="flex-1 min-w-0">
-                            <div class="flex justify-between items-start">
-                                <h4 class="text-xs font-bold text-white uppercase">Ultrasound Dental Clean</h4>
-                                <span class="text-xs font-bold text-slate-200">£25.00</span>
-                            </div>
-                            <p class="text-[10px] text-slate-400 mt-1 leading-snug">Silent Emmi-Pet ultrasound teeth cleaning. Removes tartar without sedation.</p>
-                        </div>
-                    </div>
-                </div>
+    </div>
 
-                <!-- Service 3 -->
-                <div onclick="selectService(this, '1-to-1 Solo Walk for Anxious Dogs', '£25.00')" class="service-card cursor-pointer bg-slate-900/50 border border-slate-800 p-4 rounded-xl transition-all hover:border-slate-700">
-                    <div class="flex gap-3">
-                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=300&q=80" alt="1 to 1 Dog Walk" class="w-16 h-16 rounded-lg object-cover border border-slate-700 shrink-0">
-                        <div class="flex-1 min-w-0">
-                            <div class="flex justify-between items-start">
-                                <h4 class="text-xs font-bold text-white uppercase">Dedicated 1-to-1 Solo Walk</h4>
-                                <span class="text-xs font-bold text-slate-200">£25.00</span>
-                            </div>
-                            <p class="text-[10px] text-slate-400 mt-1 leading-snug">Strictly 1-to-1 walk tailored to reactive, timid, or energetic dogs. No group distractions.</p>
-                        </div>
-                    </div>
-                </div>
+  </div>
 
-                <!-- Service 4 -->
-                <div onclick="selectService(this, 'Gentle At-Home Nail Trim', '£15.00')" class="service-card cursor-pointer bg-slate-900/50 border border-slate-800 p-4 rounded-xl transition-all hover:border-slate-700">
-                    <div class="flex gap-3">
-                        <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=300&q=80" alt="Nail Care" class="w-16 h-16 rounded-lg object-cover border border-slate-700 shrink-0">
-                        <div class="flex-1 min-w-0">
-                            <div class="flex justify-between items-start">
-                                <h4 class="text-xs font-bold text-white uppercase">At-Home Nail Care</h4>
-                                <span class="text-xs font-bold text-slate-200">£15.00</span>
-                            </div>
-                            <p class="text-[10px] text-slate-400 mt-1 leading-snug">Patient, slow-paced nail clipping done at home where your dog feels safe.</p>
-                        </div>
-                    </div>
-                </div>
+</section>
 
-                <!-- Service 5 -->
-                <div onclick="selectService(this, 'Senior Dog Comfort Visit', '£15.00')" class="service-card cursor-pointer bg-slate-900/50 border border-slate-800 p-4 rounded-xl transition-all hover:border-slate-700">
-                    <div class="flex gap-3">
-                        <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=300&q=80" alt="Senior Dog Care" class="w-16 h-16 rounded-lg object-cover border border-slate-700 shrink-0">
-                        <div class="flex-1 min-w-0">
-                            <div class="flex justify-between items-start">
-                                <h4 class="text-xs font-bold text-white uppercase">Senior Dog Comfort Visit</h4>
-                                <span class="text-xs font-bold text-slate-200">£15.00</span>
-                            </div>
-                            <p class="text-[10px] text-slate-400 mt-1 leading-snug">Garden breaks, medication administration, feeding & gentle companionship.</p>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Service 6 -->
-                <div onclick="selectService(this, 'Puppy Desensitisation Visit', '£18.00')" class="service-card cursor-pointer bg-slate-900/50 border border-slate-800 p-4 rounded-xl transition-all hover:border-slate-700">
-                    <div class="flex gap-3">
-                        <img src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?auto=format&fit=crop&w=300&q=80" alt="Puppy Care" class="w-16 h-16 rounded-lg object-cover border border-slate-700 shrink-0">
-                        <div class="flex-1 min-w-0">
-                            <div class="flex justify-between items-start">
-                                <h4 class="text-xs font-bold text-white uppercase">Puppy Confidence Visit</h4>
-                                <span class="text-xs font-bold text-slate-200">£18.00</span>
-                            </div>
-                            <p class="text-[10px] text-slate-400 mt-1 leading-snug">Gentle handling exercises, paw touching & sound desensitisation for young pups.</p>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-        </section>
+<!-- INTRO -->
+<section class="section intro">
 
-        <!-- Request Form -->
-        <section class="bg-slate-900 border border-teal-500/40 p-6 rounded-2xl space-y-5 shadow-2xl">
-            <div class="border-b border-slate-800 pb-4 flex justify-between items-center">
-                <div>
-                    <span class="text-[10px] uppercase font-bold tracking-widest text-teal-400">Selected Option</span>
-                    <p id="selected-service" class="text-xs font-bold text-white mt-0.5 uppercase">Calm Meet & Greet Consultation</p>
-                </div>
-                <div class="text-right">
-                    <span class="text-[10px] uppercase font-bold tracking-widest text-teal-400">Price</span>
-                    <p id="est-price" class="text-sm font-bold text-teal-300">FREE</p>
-                </div>
-            </div>
+  <p class="section-label">
+    THE PAWS & PATIENCE DIFFERENCE
+  </p>
 
-            <form onsubmit="event.preventDefault(); alert('Booking Enquiry Received!');" class="space-y-3.5">
-                <div>
-                    <label class="block text-[10px] font-bold text-slate-300 uppercase tracking-wider mb-1">Your Name</label>
-                    <input type="text" placeholder="e.g. Sarah Henderson" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-xs text-white outline-none focus:border-teal-400 transition-all">
-                </div>
-                <div>
-                    <label class="block text-[10px] font-bold text-slate-300 uppercase tracking-wider mb-1">Dog's Name, Breed & Temperament</label>
-                    <input type="text" placeholder="e.g. Milo (Rescue Collie, very shy around strangers)" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-xs text-white outline-none focus:border-teal-400 transition-all">
-                </div>
-                <div>
-                    <label class="block text-[10px] font-bold text-slate-300 uppercase tracking-wider mb-1">Your Mobile Number</label>
-                    <input type="tel" placeholder="e.g. 07123 456789" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-xs text-white outline-none focus:border-teal-400 transition-all">
-                </div>
-                <div>
-                    <label class="block text-[10px] font-bold text-slate-300 uppercase tracking-wider mb-1">Location / Postcode (Stanley Area)</label>
-                    <input type="text" placeholder="e.g. Sunset View, Stanley" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-xs text-white outline-none focus:border-teal-400 transition-all">
-                </div>
+  <div class="intro-grid">
 
-                <button type="submit" class="w-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-black py-3.5 rounded-lg text-xs uppercase tracking-wider transition-all mt-2 shadow-lg shadow-teal-500/20">
-                    Request Booking / Consultation <i class="fa-solid fa-paw ml-1"></i>
-                </button>
-            </form>
-        </section>
+    <h2>
+      More than a walk.
+      <em>A relationship.</em>
+    </h2>
 
-        <!-- Footer -->
-        <footer class="text-center space-y-2 pt-4 border-t border-slate-800">
-            <p class="text-xs font-bold text-white uppercase font-rounded">Paws and Patience</p>
-            <p class="text-[11px] text-slate-400">30 Sunset View, Stanley, DH9 9LA</p>
-            <p class="text-[10px] text-slate-500">© DH9 Digital • Custom Mobile Client Prototype</p>
-        </footer>
+    <p>
+      Every dog has their own personality, pace and preferences.
+      Our approach is built around patience, consistency and
+      genuinely getting to know the dogs in our care.
+    </p>
 
-    </main>
+  </div>
 
-    <script>
-        function selectService(element, name, price) {
-            document.querySelectorAll('.service-card').forEach(card => {
-                card.className = 'service-card cursor-pointer bg-slate-900/50 border border-slate-800 p-4 rounded-xl transition-all hover:border-slate-700';
-                const pTag = card.querySelector('span');
-                if(pTag) pTag.className = 'text-xs font-bold text-slate-200';
-            });
 
-            element.className = 'service-card cursor-pointer bg-slate-900/90 border-2 border-teal-500 p-4 rounded-xl transition-all shadow-lg';
-            const activePrice = element.querySelector('span');
-            if(activePrice) activePrice.className = 'text-xs font-black text-teal-400';
+  <div class="features">
 
-            document.getElementById('selected-service').innerText = name;
-            document.getElementById('est-price').innerText = price;
-        }
-    </script>
+    <div class="feature">
+
+      <span>01</span>
+
+      <h3>Individual attention</h3>
+
+      <p>
+        Care is shaped around your dog rather than a
+        one-size-fits-all routine.
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <span>02</span>
+
+      <h3>Clear communication</h3>
+
+      <p>
+        Simple updates and an easy enquiry process keep
+        you in the loop.
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <span>03</span>
+
+      <h3>Flexible support</h3>
+
+      <p>
+        Pick one service, combine options or ask for
+        something bespoke.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- SERVICES -->
+<section id="services" class="services section">
+
+  <div class="section-heading">
+
+    <div>
+
+      <p class="section-label">SERVICES</p>
+
+      <h2>
+        Choose what suits
+        <em>you.</em>
+      </h2>
+
+    </div>
+
+    <p>
+      Choose from our most popular services or ask about
+      creating something bespoke for your dog.
+    </p>
+
+  </div>
+
+
+  <div class="service-grid">
+
+
+    <article class="service-card featured">
+
+      <div class="service-icon">🐕</div>
+
+      <span class="popular">MOST POPULAR</span>
+
+      <h3>Solo Dog Walk</h3>
+
+      <p>
+        One-to-one exercise and enrichment with plenty
+        of attention.
+      </p>
+
+      <ul>
+        <li>30 or 60 minutes</li>
+        <li>Solo routine</li>
+        <li>Photo/update available</li>
+      </ul>
+
+      <a href="#booking" onclick="selectService('Solo Dog Walk')">
+        Select service →
+      </a>
+
+    </article>
+
+
+
+    <article class="service-card">
+
+      <div class="service-icon">🏡</div>
+
+      <h3>Home Visit</h3>
+
+      <p>
+        A reassuring check-in for dogs who are happier
+        in their own space.
+      </p>
+
+      <ul>
+        <li>Toilet break</li>
+        <li>Food & water</li>
+        <li>Play & companionship</li>
+      </ul>
+
+      <a href="#booking" onclick="selectService('Home Visit')">
+        Select service →
+      </a>
+
+    </article>
+
+
+
+    <article class="service-card">
+
+      <div class="service-icon">🐾</div>
+
+      <h3>Puppy Care</h3>
+
+      <p>
+        Gentle, age-appropriate support for little paws
+        and big personalities.
+      </p>
+
+      <ul>
+        <li>Short visits</li>
+        <li>Routine support</li>
+        <li>Patience-first approach</li>
+      </ul>
+
+      <a href="#booking" onclick="selectService('Puppy Care')">
+        Select service →
+      </a>
+
+    </article>
+
+
+
+    <article class="service-card">
+
+      <div class="service-icon">🌿</div>
+
+      <h3>Adventure Walk</h3>
+
+      <p>
+        Longer outings for dogs who love exploring
+        and sniffing new places.
+      </p>
+
+      <ul>
+        <li>60+ minute options</li>
+        <li>Enrichment focused</li>
+        <li>Tailored to ability</li>
+      </ul>
+
+      <a href="#booking" onclick="selectService('Adventure Walk')">
+        Select service →
+      </a>
+
+    </article>
+
+
+
+    <article class="service-card">
+
+      <div class="service-icon">🌙</div>
+
+      <h3>Evening Visit</h3>
+
+      <p>
+        A relaxed evening check-in when work or plans
+        keep you out.
+      </p>
+
+      <ul>
+        <li>Companionship</li>
+        <li>Food & water</li>
+        <li>Bedtime routine</li>
+      </ul>
+
+      <a href="#booking" onclick="selectService('Evening Visit')">
+        Select service →
+      </a>
+
+    </article>
+
+
+
+    <article class="service-card">
+
+      <div class="service-icon">✦</div>
+
+      <h3>Bespoke Care</h3>
+
+      <p>
+        Something a little different? Tell us what
+        you need.
+      </p>
+
+      <ul>
+        <li>Multiple visits</li>
+        <li>Special routines</li>
+        <li>Custom requests</li>
+      </ul>
+
+      <a href="#booking" onclick="selectService('Bespoke Care')">
+        Tell us what you need →
+      </a>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+
+<!-- HOW IT WORKS -->
+<section id="how" class="section how">
+
+  <p class="section-label">
+    SIMPLE FROM START TO FINISH
+  </p>
+
+  <h2>
+    Good care starts with
+    <em>listening.</em>
+  </h2>
+
+
+  <div class="steps">
+
+    <div>
+      <span>01</span>
+      <h3>Tell us about your dog</h3>
+      <p>
+        Share their breed, age, personality and routine.
+      </p>
+    </div>
+
+    <div>
+      <span>02</span>
+      <h3>Choose your care</h3>
+      <p>
+        Select the service and frequency that suits you.
+      </p>
+    </div>
+
+    <div>
+      <span>03</span>
+      <h3>Meet & settle in</h3>
+      <p>
+        We make introductions calmly and establish
+        what works.
+      </p>
+    </div>
+
+    <div>
+      <span>04</span>
+      <h3>Enjoy peace of mind</h3>
+      <p>
+        Your dog gets thoughtful care while you get
+        one less thing to worry about.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+<section id="about" class="about section">
+
+  <div class="about-image">
+
+    <span>🐾</span>
+
+    <strong>
+      Paws<br>
+      & Patience
+    </strong>
+
+    <small>
+      STANLEY · COUNTY DURHAM
+    </small>
+
+  </div>
+
+
+  <div class="about-content">
+
+    <p class="section-label">
+      WHY THE NAME?
+    </p>
+
+    <h2>
+      Because some paws need a little more
+      <em>patience.</em>
+    </h2>
+
+    <p>
+      From bouncy puppies to nervous dogs, every dog
+      communicates differently.
+    </p>
+
+    <p>
+      Paws & Patience is about giving them the time,
+      kindness and consistency they need to feel comfortable.
+    </p>
+
+    <blockquote>
+      “The best care is the care that makes both ends
+      of the lead feel happier.”
+    </blockquote>
+
+    <a href="#booking" class="text-link">
+      Start an enquiry →
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- OPTIONS -->
+<section class="section options">
+
+  <div class="section-heading">
+
+    <div>
+
+      <p class="section-label">
+        MAKE IT YOURS
+      </p>
+
+      <h2>
+        Build a care plan.
+      </h2>
+
+    </div>
+
+    <p>
+      Mix and match the details below when you enquire.
+      We'll help create the right routine.
+    </p>
+
+  </div>
+
+
+  <div class="options-box">
+
+    <div>
+
+      <h3>How often?</h3>
+
+      <label>
+        <input type="radio" name="frequency">
+        One-off
+      </label>
+
+      <label>
+        <input type="radio" name="frequency">
+        Weekly
+      </label>
+
+      <label>
+        <input type="radio" name="frequency">
+        2–3 times a week
+      </label>
+
+      <label>
+        <input type="radio" name="frequency">
+        Regular bespoke
+      </label>
+
+    </div>
+
+
+    <div>
+
+      <h3>What does your dog enjoy?</h3>
+
+      <label>
+        <input type="checkbox">
+        Sniffing & exploring
+      </label>
+
+      <label>
+        <input type="checkbox">
+        Fetch & play
+      </label>
+
+      <label>
+        <input type="checkbox">
+        Quiet walks
+      </label>
+
+      <label>
+        <input type="checkbox">
+        Companionship & cuddles
+      </label>
+
+    </div>
+
+
+    <div>
+
+      <h3>Anything to consider?</h3>
+
+      <label>
+        <input type="checkbox">
+        Puppy
+      </label>
+
+      <label>
+        <input type="checkbox">
+        Nervous / anxious
+      </label>
+
+      <label>
+        <input type="checkbox">
+        Reactive / needs space
+      </label>
+
+      <label>
+        <input type="checkbox">
+        Senior dog
+      </label>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- BOOKING -->
+<section id="booking" class="booking section">
+
+  <div class="booking-intro">
+
+    <p class="section-label">
+      ENQUIRE & BOOK
+    </p>
+
+    <h2>
+      Let's talk about
+      <em>your dog.</em>
+    </h2>
+
+    <p>
+      Complete the form and tell us a little about what
+      you're looking for.
+    </p>
+
+    <div class="contact-box">
+
+      <span>Prefer to speak?</span>
+
+      <strong>
+        07377 527035
+      </strong>
+
+      <small>
+        Replace this number with your confirmed business number.
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <form id="booking-form" class="booking-form">
+
+    <div class="progress">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+    </div>
+
+
+    <!-- STEP 1 -->
+
+    <div class="form-step active">
+
+      <small>STEP 1 OF 3</small>
+
+      <h3>
+        Tell us about you
+      </h3>
+
+      <div class="form-grid">
+
+        <label>
+          First name
+          <input
+            required
+            name="name"
+            placeholder="Your name"
+          >
+        </label>
+
+        <label>
+          Phone
+          <input
+            required
+            name="phone"
+            type="tel"
+            placeholder="07..."
+          >
+        </label>
+
+      </div>
+
+
+      <label>
+        Email
+        <input
+          required
+          name="email"
+          type="email"
+          placeholder="you@example.com"
+        >
+      </label>
+
+
+      <button
+        type="button"
+        class="button primary next"
+      >
+        Continue →
+      </button>
+
+    </div>
+
+
+
+    <!-- STEP 2 -->
+
+    <div class="form-step">
+
+      <small>STEP 2 OF 3</small>
+
+      <h3>
+        Tell us about your dog
+      </h3>
+
+
+      <div class="form-grid">
+
+        <label>
+          Dog's name
+          <input
+            required
+            name="dog"
+            placeholder="Their name"
+          >
+        </label>
+
+        <label>
+          Breed / mix
+          <input
+            name="breed"
+            placeholder="e.g. Cocker Spaniel"
+          >
+        </label>
+
+      </div>
+
+
+      <div class="form-grid">
+
+        <label>
+          Age
+          <input
+            name="age"
+            placeholder="e.g. 4 years"
+          >
+        </label>
+
+
+        <label>
+          Preferred service
+
+          <select
+            required
+            name="service"
+            id="service"
+          >
+
+            <option value="">
+              Choose...
+            </option>
+
+            <option>
+              Solo Dog Walk
+            </option>
+
+            <option>
+              Home Visit
+            </option>
+
+            <option>
+              Puppy Care
+            </option>
+
+            <option>
+              Adventure Walk
+            </option>
+
+            <option>
+              Evening Visit
+            </option>
+
+            <option>
+              Bespoke Care
+            </option>
+
+          </select>
+
+        </label>
+
+      </div>
+
+
+      <label>
+        Anything we should know?
+
+        <textarea
+          name="notes"
+          rows="4"
+          placeholder="Temperament, routine, recall, allergies, mobility..."
+        ></textarea>
+
+      </label>
+
+
+      <div class="form-buttons">
+
+        <button
+          type="button"
+          class="button secondary back"
+        >
+          ← Back
+        </button>
+
+        <button
+          type="button"
+          class="button primary next"
+        >
+          Continue →
+        </button>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- STEP 3 -->
+
+    <div class="form-step">
+
+      <small>STEP 3 OF 3</small>
+
+      <h3>
+        When would you like care?
+      </h3>
+
+
+      <div class="form-grid">
+
+        <label>
+          Preferred date
+
+          <input
+            required
+            type="date"
+            name="date"
+          >
+
+        </label>
+
+
+        <label>
+          Preferred time
+
+          <select name="time">
+
+            <option>Morning</option>
+            <option>Midday</option>
+            <option>Afternoon</option>
+            <option>Evening</option>
+            <option>Flexible</option>
+
+          </select>
+
+        </label>
+
+      </div>
+
+
+      <label>
+        Anything else?
+
+        <textarea
+          name="message"
+          rows="4"
+          placeholder="Tell us about your ideal routine, frequency or any questions."
+        ></textarea>
+
+      </label>
+
+
+      <div class="form-buttons">
+
+        <button
+          type="button"
+          class="button secondary back"
+        >
+          ← Back
+        </button>
+
+        <button
+          class="button primary"
+          type="submit"
+        >
+          Send enquiry →
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- SUCCESS -->
+
+    <div class="success">
+
+      <div class="success-icon">
+        ✓
+      </div>
+
+      <h3>
+        Thanks!
+      </h3>
+
+      <p>
+        Your enquiry has been completed.
+      </p>
+
+      <p class="small">
+        Connect this form to your preferred email/form service
+        before launching the website.
+      </p>
+
+    </div>
+
+  </form>
+
+</section>
+
+
+
+<!-- FAQ -->
+<section id="faq" class="section faq">
+
+  <p class="section-label">
+    QUESTIONS
+  </p>
+
+  <h2>
+    Good to <em>know.</em>
+  </h2>
+
+
+  <div class="faq-list">
+
+    <details>
+      <summary>
+        Do you offer one-off bookings?
+      </summary>
+
+      <p>
+        Yes. One-off services can be requested through
+        the enquiry form and are subject to availability.
+      </p>
+
+    </details>
+
+
+    <details>
+      <summary>
+        Can you look after nervous or reactive dogs?
+      </summary>
+
+      <p>
+        Every dog is different. Tell us about your dog's
+        needs when enquiring so we can discuss the most
+        suitable approach.
+      </p>
+
+    </details>
+
+
+    <details>
+      <summary>
+        Do you cover areas outside Stanley?
+      </summary>
+
+      <p>
+        Coverage can vary. Include your postcode or area
+        in your enquiry and we can confirm availability.
+      </p>
+
+    </details>
+
+
+    <details>
+      <summary>
+        How much does it cost?
+      </summary>
+
+      <p>
+        Pricing can depend on the service, duration,
+        frequency and travel. Contact us for current prices.
+      </p>
+
+    </details>
+
+
+    <details>
+      <summary>
+        Can I request a regular weekly slot?
+      </summary>
+
+      <p>
+        Yes. Regular bookings can be discussed and are
+        subject to availability.
+      </p>
+
+    </details>
+
+  </div>
+
+</section>
+
+
+
+<!-- CTA -->
+<section class="cta">
+
+  <div>
+
+    <p class="section-label">
+      PAWS & PATIENCE
+    </p>
+
+    <h2>
+      Ready to make their day?
+    </h2>
+
+  </div>
+
+  <a href="#booking" class="button light">
+    Start an enquiry →
+  </a>
+
+</section>
+
+</main>
+
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-brand">
+
+    <div class="paw">
+      🐾
+    </div>
+
+    <strong>
+      Paws & Patience
+    </strong>
+
+    <p>
+      Thoughtful dog care in Stanley,
+      County Durham.
+    </p>
+
+  </div>
+
+
+  <div>
+
+    <h4>Explore</h4>
+
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQs</a>
+
+  </div>
+
+
+  <div>
+
+    <h4>Contact</h4>
+
+    <a href="tel:07377527035">
+      07377 527035
+    </a>
+
+    <a href="#booking">
+      Make an enquiry
+    </a>
+
+    <span>
+      Stanley, County Durham
+    </span>
+
+  </div>
+
+
+  <div>
+
+    <h4>Social</h4>
+
+    <a href="#">
+      Instagram
+    </a>
+
+    <a href="#">
+      Facebook
+    </a>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <span>
+      © <span id="year"></span>
+      Paws & Patience
+    </span>
+
+    <span>
+      Built with care.
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
